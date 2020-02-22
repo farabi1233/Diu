@@ -1,4 +1,7 @@
 <?php include('../include/header.php'); ?>
+
+
+
 <?php
 $id = $_POST['id'];
 include('../include/connect.php');
@@ -38,7 +41,8 @@ $address = $_POST['address'];
 $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address',`image` = '$image'  WHERE `donor_list`.`id` = '$id'";
 mysqli_query($con, $sql_insert);
     
-    header("Location: http://localhost/DIU/admin/donor/index.php");
+    header("Location:index.php");
+   ob_end_flush();
 
 ?>
 

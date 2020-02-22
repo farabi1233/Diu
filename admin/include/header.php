@@ -1,3 +1,5 @@
+<?php ob_start(); ?>
+
 <?php $url = 'http://localhost/DIU/admin/'; ?>
 
 
