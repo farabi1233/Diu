@@ -1,8 +1,7 @@
 <?php include('../include/header.php'); ?>
 <?php
 
-
-
+$id = $_POST['id'];
 
 
 include('../include/connect.php');
@@ -35,7 +34,7 @@ $location = $_POST['location'];
 
 
 
-$sql_insert = "UPDATE `campaign` SET id- NULL `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address',`image` = '$image'  WHERE `donor_list`.`id` = '$id'";
+$sql_insert = "UPDATE `campaign` SET `id` = '$id', `name` = '$name',`start_time` = '$start',`end_time` = '$emd',`location` = '$location',`image` = '$image'  WHERE `campaign`.`id` = '$id'";
 if(mysqli_query($con, $sql_insert)){ 
 header("Location: index.php");
 }

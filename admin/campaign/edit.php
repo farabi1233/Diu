@@ -31,7 +31,11 @@ $row = mysqli_fetch_assoc($result);
         <h2>Edit Campaign Data:  :</h2>
         <hr>
         <form action="update.php" method="POST" enctype="multipart/form-data">
-           
+        
+        <div class="form-group">
+                <label for="name">Id</label>
+                <input type="text" class="form-control" name="id" value="<?php echo $row['id'];  ?>">
+            </div>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" name="name" value="<?php echo $row['name'];  ?>">
