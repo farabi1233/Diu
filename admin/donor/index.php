@@ -65,7 +65,7 @@ $result = mysqli_query($con, $sql);
            <td>
                 <a href="show.php?id=   <?php echo $row['id'];?>  "class="btn btn-info">View</a>
                 <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Edit</a>
-                <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this Data?');">Delete</a>
+                <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this Data?');"><i class="nav-icon ti ti-trash"> Delete</i></a>
             </td>
              </tr>
         </tr>
@@ -76,9 +76,8 @@ $result = mysqli_query($con, $sql);
 
     </div>
 
+
 </div>
-
-
 </div>
 <?php include('../include/footer.php'); ?>
 

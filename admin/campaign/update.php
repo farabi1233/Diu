@@ -34,7 +34,7 @@ $location = $_POST['location'];
 
 
 
-$sql_insert = "UPDATE `campaign` SET `id` = '$id', `name` = '$name',`start_time` = '$start',`end_time` = '$emd',`location` = '$location',`image` = '$image'  WHERE `campaign`.`id` = '$id'";
+$sql_insert = "UPDATE `campaign` SET `id` = '$id', `name` = '$name',`start_time` = '$start',`end_time` = '$end',`location` = '$location',`image` = '$image'  WHERE `campaign`.`id` = '$id'";
 if(mysqli_query($con, $sql_insert)){ 
 header("Location: index.php");
 }
