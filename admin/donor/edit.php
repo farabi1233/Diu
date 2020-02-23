@@ -86,7 +86,15 @@ $result_bg = mysqli_query($con, $sql_bg);
             <div class="form-group">
             <label for="name">Gender</label>
             <select  type="text" class="form-control" name="gender" required>
-                <option value="" disabled selected >Select Gender ...</option>
+
+            <?php 
+            
+            if(!empty($row['gender'])){ ?>
+            <option value="<?php echo $row['gender'];  ?>" disabled selected ><?php echo $row['gender'];  ?></option>
+
+          <?php  }
+            ?>
+                >
               
                 <option value="male">Male</option>
                 <option value="female">Female</option>

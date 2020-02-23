@@ -22,7 +22,7 @@ $result = mysqli_query($con, $sql);
 ?>
 
 <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-ld-12">
                                 <div class="card card-statistics">
 
 

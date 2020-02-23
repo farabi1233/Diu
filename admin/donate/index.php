@@ -4,7 +4,7 @@
 
 
 $con = connect_db();
-$sql = "SELECT * FROM `blog`";
+$sql = "SELECT * FROM `donate`";
 
 $result = mysqli_query($con, $sql);
 
@@ -18,7 +18,7 @@ $result = mysqli_query($con, $sql);
 
 
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-9">
         <div class="card card-statistics">
 
 
@@ -27,37 +27,31 @@ $result = mysqli_query($con, $sql);
             <div class="card">
                 <div class="card-body">
 
-                    <h2>Blog List:</h2>
+                    <h2>Blood Donate List:</h2>
                     <table class="table">
                         <tr>
                             <th>SL No.</th>
-
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Date</th>
-
-                            <th>Image</th>
-                            <th>Action</th>
+                            <th>Id</th>
+                            <th>Date  </th>
+                            <th> Venue </th>
+                            <th> Action </th>
 
 
                         </tr>
                         <?php $sl = 1 ?>
-                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <?php while ($row = mysqli_fetch_assoc($result)) {; ?>
 
                             <tr>
                                 <td><?php echo $sl; ?></td>
 
-                                <td><?php echo $row['title']; ?></td>
-                                <td><?php echo $row['description']; ?></td>
+                                <td><?php echo $row['user_id']; ?></td>
                                 <td><?php echo $row['date']; ?></td>
+                                <td><?php echo $row['venue']; ?></td>
                                 
-                               
 
-                                <td><img src="<?php echo "../";
-                                                echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>
-                                    <a href="show.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
-                                    <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+                                   
+                                    
                                     <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this Data?');">Delete</a>
                                 </td>
                             </tr>

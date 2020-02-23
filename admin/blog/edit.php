@@ -9,7 +9,7 @@ $id = $_GET['id'];
 include('../include/connect.php');
 $con = connect_db();
 
-$sql = "SELECT* FROM blog ";
+$sql = "SELECT* FROM blog  where `blog`.`id` = '$id'";
 
 $result = mysqli_query($con, $sql);
 
@@ -28,14 +28,15 @@ $row = mysqli_fetch_assoc($result);
 
             <div class="card">
                 <div class="card-body">
-                    <h2>Edit Campaign Data: :</h2>
+                    <h2>Edit Blog Data: :</h2>
                     <hr>
                     <form action="update.php" method="POST" enctype="multipart/form-data">
 
-                        <div class="form-group">
-                            <label for="name">Id</label>
-                            <input disabled type="text" class="form-control" name="id" value="<?php echo $row['id'];  ?>">
+                    <div class="form-group">
+                            <label for="name">Title</label>
+                            <input  type="text" class="form-control" name="id" value="<?php echo $row['id'];  ?> " >
                         </div>
+
                         <div class="form-group">
                             <label for="name">Title</label>
                             <input type="text" class="form-control" name="title" value="<?php echo $row['title'];  ?>">

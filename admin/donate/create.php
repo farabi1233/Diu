@@ -19,34 +19,40 @@ $con = connect_db();
 
             <div class="card">
                 <div class="card-body">
-                    <h2>Add New Blog :</h2>
+                    <h2>Add New Donor :</h2>
                     <hr>
                     <form action="store.php" method="POST" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <label for="name">Title</label>
-                            <input type="text" class="form-control" name="title" placeholder="Enter Blog Title">
+                            <label for="name">User Id</label>
+                            <input type="text" class="form-control" name="user_id" placeholder="Enter Donor User ID">
                         </div>
 
-                        <div class="form-group">
-                            <label for="name">Blog Description</label>
-                            <textarea type="text" class="form-control" name="description" rows="6"> </textarea>
-                        </div>
 
                         <div class="form-group">
 
 
                             <label for="name">Date</label>
-                            <input type="date" class="form-control" id="e" name="date" placeholder="In Which day Campaign Start">
+                            <input type="date" class="form-control" id="e" name="date" placeholder="Donate Date">
                             <script>
                                 document.getElementById('e').value = new Date().toISOString().substring(0, 10);
                             </script>
                         </div>
 
-                        <div cla <div class="form-group">
-                            <label for="name">Blog Image</label>
-                            <input type="file" class="form-control" name="image">
+                        <div class="form-group">
+                            <label for="name">Venue</label>
+                            <select type="text" class="form-control" name="venue">
+                                <option value="" disabled selected>Select Venue ...</option>
+
+                                <option value="Permanent Campus">Permanent Campus</option>
+                                <option value="Main Campus ">Main Campus </option>
+                                <option value="Others">Others</option>
+
+
+                            </select>
                         </div>
+
+
 
                         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                     </form>
