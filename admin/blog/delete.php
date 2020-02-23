@@ -5,7 +5,7 @@ $con = connect_db();
 
 
 
-$sql = "SELECT * FROM donor_list WHERE id = $id";
+$sql = "SELECT * FROM BLOG WHERE id = $id";
 
 $result = mysqli_query($con, $sql);
 $data = mysqli_fetch_assoc($result);
@@ -14,7 +14,7 @@ if(file_exists($image_location)){
     unlink($image_location);
 }
 
-$sql = "DELETE FROM donor_list WHERE id = '$id'";
+$sql = "DELETE FROM BLOG WHERE id = '$id'";
  mysqli_query($con, $sql);
  header("Location: index.php");
 

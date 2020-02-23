@@ -1,15 +1,15 @@
 <?php include('../include/header.php'); ?>
 <?php
 
+$id = $_POST["id"] ;
+$title = $_POST['title'];
+$description = $_POST['description'];
+$date = $_POST['date'];
 
 
 
-$id = $_POST['id'];
 include('../include/connect.php');
 $con = connect_db();
-$sql = "SELECT * FROM `donor_list` WHERE id ='$id';";
-$result = mysqli_query($con, $sql);
-$row = mysqli_fetch_assoc($result);
 
 
 if (!empty($_FILES['image']['name'])) {
@@ -27,25 +27,38 @@ if (!empty($_FILES['image']['name'])) {
         //exit;
         unlink('../uploads/' . str_replace('uploads/','',$row['image']));
     }
+
+    $sql_insert = "UPDATE `blog` SET `id` = NULL, `title` = '$title', `description` = '$description',`date` = '$date',`image` = '$image'  WHERE `blog`.`id` = '$id'";
+    if(mysqli_query($con, $sql_insert)){ 
+    header("Location: index.php");
+    }
+    else{
+        echo "query problem";
+    }
+   
+
+
 }
 
-
-$name = $_POST['name'];
-$blood_group_id = $_POST['blood_group_id'];
-$age = $_POST['age'];
-$gender = $_POST['gender'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$address = $_POST['address'];
-
-
-$sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address',`image` = '$image'  WHERE `donor_list`.`id` = '$id'";
-if(mysqli_query($con, $sql_insert)){ 
-header("Location: index.php");
-}
 else{
-    echo "query problem";
+
+     $sql_insert = "UPDATE `blog` SET `id` = NULL, `title` = '$title', `description` = '$description',`date` = '$date',`image` = NUll WHERE `blog`.`id` = '$id'";
+    if(mysqli_query($con, $sql_insert)){ 
+    header("Location: index.php");
+    }
+    else{
+        echo "query problem";
+    }
+
+
+
 }
+
 ?>
+
+
+
+
+
 
 <?php include('../include/footer.php'); ?>
