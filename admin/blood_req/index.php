@@ -8,7 +8,7 @@
 <?php include('../include/connect.php'); ?>
 <?php
 $con = connect_db();
-$sql = "SELECT * FROM reg_donor  ";
+$sql = "SELECT * FROM req_for_blood ";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -20,7 +20,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="container"></div>
             <div class="card">
                 <div class="card-body">
-                    <h2>Apply For a Donor:</h2>
+                    <h2>Blood Request :</h2>
                     <table class="table">
                         <tr>
                             <th>SL No.</th>
@@ -30,8 +30,8 @@ $row = mysqli_fetch_assoc($result);
                             <th>Phone </th>
                             <th>Email </th>
                             <th>Gender </th>
-                            <th>blood_group </th>
-                            <th>Image </th>
+                            <th>Blood Group </th>
+                            <th>Blood Bag </th>
                             <th>location </th>
                             <th>Action </th>
                         </tr>
@@ -64,7 +64,10 @@ $row = mysqli_fetch_assoc($result);
                                     <h5><?php echo $row['blood_group']; ?></h5>
                                 </td>
                                 
-                                <td><img src="<?php echo "../";echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
+                                <td>
+                                    <h5><?php echo $row['blood_bag']; ?></h5>
+                                </td>
+                                
                                 
                                 <td>
                                     <h5><?php echo $row['address']; ?></h5>

@@ -38,11 +38,11 @@
         <div class="appointment-form-wrapper theme-custom-box-shadow text-center clearfix wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
             <h3 class="join-heading join-heading-alt">Your Information</h3>
 
-            <form class="appoinment-form" action="store.php" method="POST" enctype="multipart/form-data">
+            <form class="appoinment-form" action="store_blood_req_info.php" method="POST" enctype="multipart/form-data">
 
 
                 <div class="form-group col-md-12">
-                    <input type="text" class="form-control" name="name" placeholder="Patient Name">
+                    <input type="text" class="form-control" name="name" placeholder="Name">
                 </div>
 
 
@@ -57,22 +57,27 @@
                 </div>
                 <div class="form-group col-md-12">
                     <div class="select-style">
-                        <select class="form-control" name="gender">
+                        <select type="text" class="form-control" name="gender">
                             <option disabled selected>Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Others</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group col-md-6">
                     <div class="select-style">
-                        <select class="form-control" name="blood_group_id">
-                            <option disabled selected>Blood Group (required)</option>
-                            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                                <option value="<?php echo $row['id']  ?>"><?php echo $row['blood_group']  ?></option>
-                            <?php } ?>
+                        <select class="form-control" name="blood_group">
+                            <option disabled selected>Blood Group</option>
+                           
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A+</option>
+                               
+
+                            
 
                         </select>
                     </div>
@@ -80,21 +85,20 @@
 
 
                 <div class="form-group col-md-6">
-                    <div class="select-style">
-                        <select class="form-control" name="bag">
-                            <option disabled selected>Blood Bag (required)</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
+
+                <select class="form-control" name="blood_bag">
+                            <option disabled selected>Blood bag</option>
+                           
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                            
+
                         </select>
-                    </div>
+
                 </div>
 
                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
@@ -102,7 +106,7 @@
                 </div>
 
                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                    <button id="btn_submit" class="btn btn-success" type="submit">Submit</button>
+                    <button id="submit" class="btn btn-success" type="submit">Submit</button>
                 </div>
 
             </form>
