@@ -99,7 +99,7 @@
                                     <li> <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
                                     <li> <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
                             
-                                    <li> <a href="<?php echo $url; ?>apply/index.php">Who Apply For Reg.</a> </li>
+                                    <li> <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
 
                                 </ul>
                             </li>

@@ -23,11 +23,3 @@ $sql = "INSERT INTO `campaign` (`id`, `name`, `details`, `start_time`, `end_time
 if(mysqli_query($con, $sql)){
     header("Location: index.php");
 }
-
-
-
-
-
-
-
-?>

@@ -2,63 +2,44 @@
 
 
 <?php
-
-
 include('../include/connect.php');
 $con = connect_db();
-
-
-
-
-
 ?>
 <div class="row">
-                            <div class="col-sm-9">
-                                <div class="card card-statistics">
+    <div class="col-sm-9">
+        <div class="card card-statistics">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Add New Campaign :</h2>
+                    <hr>
+                    <form action="store.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Campaign Name">
+                        </div>
 
-
-<div class="card">
-    <div class="card-body">
-        <h2>Add New Campaign :</h2>
-        <hr>
-        <form action="store.php" method="POST" enctype="multipart/form-data">
-
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" placeholder="Enter Campaign Name">
+                        <div class="form-group">
+                            <label for="name">Details</label>
+                            <textarea type="text" class="form-control" name="details" placeholder="Campaign Details" rows="3"> </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Start:</label>
+                            <input type="date" class="form-control" name="start" placeholder="In Which day Campaign Start">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">End:</label>
+                            <input type="date" class="form-control" name="end" placeholder="In Which day Campaign End"">
+                         </div>
+                         <div class=" form-group">
+                            <label for="name">Location</label>
+                            <textarea type="text" class="form-control" name="location" placeholder="Enter Locaton" rows="3"> </textarea>
+                        </div>
+                        <div cla <div class="form-group">
+                            <label for="name">Promo Image</label>
+                            <input type="file" class="form-control" name="image">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                    </form>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="name">Details</label>
-                <textarea type="text" class="form-control" name="details" placeholder="Campaign Details" rows="3"> </textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="name">Start:</label>
-                <input type="date" class="form-control" name="start" placeholder="In Which day Campaign Start">
-            </div>
-            <div class="form-group">
-                <label for="name">End:</label>
-                <input type="date" class="form-control" name="end" placeholder="In Which day Campaign End"">
-            </div>
-            <div class="form-group">
-                <label for="name">Location</label>
-                <textarea type="text" class="form-control" name="location" placeholder="Enter Locaton" rows="3"> </textarea>
-            </div>
-
-            <div cla <div class="form-group">
-                <label for="name">Promo Image</label>
-                <input type="file" class="form-control" name="image">
-            </div>
-
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-        </form>
-
-
-
-
-    </div>
-</div>
-
-
-<?php include('../include/footer.php'); ?>
+            <?php include('../include/footer.php'); ?>

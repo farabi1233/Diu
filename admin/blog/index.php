@@ -1,60 +1,35 @@
 <?php include('../include/header.php'); ?>
 <?php include('../include/connect.php'); ?>
 <?php
-
-
 $con = connect_db();
 $sql = "SELECT * FROM `blog`";
-
 $result = mysqli_query($con, $sql);
-
-
-
-
-
-
-
 ?>
-
-
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
         <div class="card card-statistics">
-
-
-
             <div class="container"></div>
             <div class="card">
                 <div class="card-body">
-
                     <h2>Blog List:</h2>
                     <table class="table">
                         <tr>
                             <th>SL No.</th>
-
                             <th>Title</th>
                             <th>Description</th>
                             <th>Date</th>
-
                             <th>Image</th>
                             <th>Action</th>
-
-
                         </tr>
                         <?php $sl = 1 ?>
                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-
                             <tr>
                                 <td><?php echo $sl; ?></td>
-
                                 <td><?php echo $row['title']; ?></td>
                                 <td><?php echo $row['description']; ?></td>
                                 <td><?php echo $row['date']; ?></td>
-                                
-                               
-
                                 <td><img src="<?php echo "../";
-                                                echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
+                                 echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>
                                     <a href="show.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
                                     <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
@@ -62,16 +37,10 @@ $result = mysqli_query($con, $sql);
                                 </td>
                             </tr>
                             </tr>
-
                         <?php $sl++;
                         } ?>
                     </table>
-
-
                 </div>
-
             </div>
-
-
         </div>
         <?php include('../include/footer.php'); ?>

@@ -21,27 +21,15 @@ $row['image'];
 
 
 if (empty($_FILES['image']['name'])) {
-
-
-
-
-
     $sql_insert = "UPDATE `campaign` SET  `name` = '$name',`details` = '$details',`start_time` = '$start',`end_time` = '$end',`location` = '$location' WHERE `campaign`.`id` = '$id'";
     mysqli_query($con, $sql_insert);
-
     header("Location:index.php");
     ob_end_flush();
 } else {
-
-
     $rand = rand(1111, 888888);
     $image = 'uploads/' . $rand . $_FILES['image']['name'];
-
     $upload = '../uploads/' . $rand . $_FILES['image']['name'];
     move_uploaded_file($_FILES['image']['tmp_name'], $upload);
-
-
-
     if (!empty($row['image'])) {
         //echo str_replace('uploads/','',$row['image']);
         //exit;

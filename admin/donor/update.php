@@ -20,19 +20,16 @@ $row = mysqli_fetch_assoc($result);
 
 if (empty($_FILES['image']['name'])) {
 
-    
+
     $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address'  WHERE `donor_list`.`id` = '$id'";
     mysqli_query($con, $sql_insert);
-        
-        header("Location:index.php");
-       ob_end_flush();
-    
 
-}
-else{
+    header("Location:index.php");
+    ob_end_flush();
+} else {
 
-   
-       $rand = rand(1111, 888888);
+
+    $rand = rand(1111, 888888);
     $image = 'uploads/' . $rand . $_FILES['image']['name'];
 
     $upload = '../uploads/' . $rand . $_FILES['image']['name'];
@@ -43,13 +40,13 @@ else{
     if (!empty($row['image'])) {
         //echo str_replace('uploads/','',$row['image']);
         //exit;
-        unlink('../uploads/' . str_replace('uploads/','',$row['image']));
+        unlink('../uploads/' . str_replace('uploads/', '', $row['image']));
     }
     $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address',`image` = '$image'  WHERE `donor_list`.`id` = '$id'";
     mysqli_query($con, $sql_insert);
-        
-        header("Location:index.php");
-       ob_end_flush();
+
+    header("Location:index.php");
+    ob_end_flush();
 }
 
 ?>

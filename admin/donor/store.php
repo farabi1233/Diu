@@ -23,11 +23,3 @@ $sql = "INSERT INTO `donor_list` (`id`, `name`, `blood_id`, `age`, `gender`, `ph
 if(mysqli_query($con, $sql)){
     header("Location: index.php");
 }
-
-
-
-
-
-
-
-?>
