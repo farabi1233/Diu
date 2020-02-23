@@ -25,9 +25,14 @@ $result = mysqli_query($con, $sql);
                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                             <tr>
                                 <td><?php echo $sl; ?></td>
-                                <td><?php echo $row['title']; ?></td>
-                                <td><?php echo $row['description']; ?></td>
-                                <td><?php echo $row['date']; ?></td>
+                                <td><?php $y= $row['title']; echo substr("$y",0,14)  ;  ?>...</td>
+                             
+
+
+
+                                <td><?php $x= $row['description']; echo substr("$x",0,14)  ; ?>...</td>
+                                <td><?php 
+                                echo $row['date']; ?></td>
                                 <td><img src="<?php echo "../";
                                  echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>

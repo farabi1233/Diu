@@ -94,12 +94,12 @@
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-layout-column3-alt"></i><span class="nav-title">Show Data</span></a>
                                 <ul aria-expanded="false">
-                                    <li> <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
-                                    <li> <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
-                                    <li> <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
-                                    <li> <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
-                            
-                                    <li> <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
+                                <li > <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
+                                <li > <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
+                                <li > <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
+                                <li > <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
+                                <li > <a href="<?php echo $url; ?>blood_req/index.php">Request For Blood</a> </li>
+                                <li > <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
 
                                 </ul>
                             </li>

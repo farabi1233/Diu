@@ -80,7 +80,7 @@
                             <li class="active">
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                                     <i class="nav-icon ti ti-plus"></i>
-                                    <span class="nav-title">Add Data</span>
+                                    <span class="nav-plus">Add Data</span>
                                     
                                 </a>
                                 <ul aria-expanded="false">

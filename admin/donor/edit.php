@@ -15,20 +15,20 @@ $result_bg = mysqli_query($con, $sql_bg);
 
 <div class="card">
     <div class="card-body">
-        <h2>Add New Donor :</h2>
+        <h2>Edit Donor Data</h2>
         <hr>
         <form action="update.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="name">Id</label>
-                <input type="text" class="form-control" name="id" value="<?php echo $row['id'];  ?>">
+                <label for="name">ID: (required)</label>
+                <input required type="text" class="form-control" name="id" value="<?php echo $row['id'];  ?>">
             </div>
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" value="<?php echo $row['name'];  ?>">
+                <label for="name">Name: (required)</label>
+                <input required type="text" class="form-control" name="name" value="<?php echo $row['name'];  ?>">
             </div>
             <div class="form-group">
-                <label for="name">Blood Group</label>
-                <select type="text" class="form-control" name="blood_group_id">
+                <label for="name">Blood Group: (required)</label>
+                <select required type="text" class="form-control" name="blood_group_id">
                     <?php while ($row_bg = mysqli_fetch_assoc($result_bg)) {  ?>
                         <?php if ($row_bg['bg_id'] == $row['blood_id']) { ?>
                             <option value="<?php echo $row_bg['bg_id']  ?>"> <?php echo $row_bg['bg']  ?> </option>
@@ -58,8 +58,8 @@ $result_bg = mysqli_query($con, $sql_bg);
                 </select>
             </div>
             <div class="form-group">
-                <label for="name">Phone no. </label>
-                <input type="text" class="form-control" name="phone" value="<?php echo $row['phone']; ?>">
+                <label for="name">Phone No: (required) </label>
+                <input required type="text" class="form-control" name="phone" value="<?php echo $row['phone']; ?>">
             </div>
             <div class="form-group">
                 <label for="name">Email Address</label>
@@ -70,7 +70,7 @@ $result_bg = mysqli_query($con, $sql_bg);
                 <textarea type="text" class="form-control" name="address" placeholder="Enter Address" rows="6"><?php echo $row['address'];  ?> </textarea>
             </div>
             <div class="form-group">
-                <label for="name">Doner Image </label><br>
+                <label for="name">Donor Image </label><br>
                 <img src="<?php echo "../";
                 echo $row['image'];  ?>" alt="" width="100px" height="80px">
                 <input type="file" class="form-control" name="image">

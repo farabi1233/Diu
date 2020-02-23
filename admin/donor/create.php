@@ -20,20 +20,20 @@ $result = mysqli_query($con, $sql);
 
             <div class="card">
                 <div class="card-body">
-                    <h2>Add New Donor :</h2>
+                    <h2>Add New Donor </h2>
                     <hr>
                     <form action="store.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="name">Id</label>
-                            <input type="text" class="form-control" name="id" placeholder="Enter ID">
+                            <label for="name">ID: (required)</label>
+                            <input required type="text" class="form-control" name="id" placeholder="Enter ID">
                         </div>
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Donor Name">
+                            <label for="name">Name: (required)</label>
+                            <input required type="text" class="form-control" name="name" placeholder="Enter Donor Name">
                         </div>
                         <div class="form-group">
-                            <label for="name">Blood Group</label>
-                            <select type="text" class="form-control" name="blood_group_id">
+                            <label for="name">Blood Group: (required)</label>
+                            <select required type="text" class="form-control" name="blood_group_id">
                                 <option value="">Select Blood Group ...</option>
                                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                     <option value="<?php echo $row['id']  ?>"><?php echo $row['blood_group']  ?></option>
@@ -55,8 +55,8 @@ $result = mysqli_query($con, $sql);
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="name">Phone no. </label>
-                            <input type="text" class="form-control" name="phone" placeholder="Enter Phone Number">
+                            <label for="name">Phone No: (required) </label>
+                            <input required type="text" class="form-control" name="phone" placeholder="Enter Phone Number">
                         </div>
                         <div class="form-group">
                             <label for="name">Email Address</label>
@@ -67,7 +67,7 @@ $result = mysqli_query($con, $sql);
                             <textarea type="text" class="form-control" name="address" placeholder="Enter Address" rows="6"> </textarea>
                         </div>
                         <div cla <div class="form-group">
-                            <label for="name">Doner Image </label>
+                            <label for="name">Donor Image </label>
                             <input type="file" class="form-control" name="image">
                         </div>
                         <button type="submit" class="btn btn-primary" name="submit">Submit</button>

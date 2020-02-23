@@ -8,19 +8,19 @@ $con = connect_db();
         <div class="card card-statistics">
             <div class="card">
                 <div class="card-body">
-                    <h2>Add New Blog :</h2>
+                    <h2>Add New Blog </h2>
                     <hr>
                     <form action="store.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="name">Title</label>
-                            <input type="text" class="form-control" name="title" placeholder="Enter Blog Title">
+                            <label  for="name">Title   (required):</label>
+                            <input required type="text" class="form-control" name="title" placeholder="Enter Blog Title">
                         </div>
                         <div class="form-group">
-                            <label for="name">Blog Description</label>
-                            <textarea type="text" class="form-control" name="description" rows="6"> </textarea>
+                            <label for="name">Blog Description (required):</label>
+                            <textarea required type="text" class="form-control" name="description" rows="6"> </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="name">Date</label>
+                            <label for="name">Date:</label>
                             <input type="date" class="form-control" id="e" name="date" placeholder="In Which day Campaign Start">
                             <script>
                                 document.getElementById('e').value = new Date().toISOString().substring(0, 10);
@@ -28,7 +28,7 @@ $con = connect_db();
                         </div>
 
                         <div cla <div class="form-group">
-                            <label for="name">Blog Image</label>
+                            <label for="name">Blog Image:</label>
                             <input type="file" class="form-control" name="image">
                         </div>
 

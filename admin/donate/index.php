@@ -18,7 +18,7 @@ $result = mysqli_query($con, $sql);
 
 
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
         <div class="card card-statistics">
 
 
