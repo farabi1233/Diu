@@ -4,13 +4,9 @@
 
 
 $con = connect_db();
-$sql = "SELECT donate.*, donor_list.name as name, donor_list.blood_group as blood_group  FROM donor_list JOIN donate on donor_list.id = donate.user_id WHERE donor_list.id= donate.user_id ORDER BY donate.user_id DESC";
+$sql = "SELECT donate.*, donor_list.name as name, donor_list.blood_group as blood_group  FROM donor_list JOIN donate on donor_list.id = donate.user_id WHERE donor_list.id= donate.user_id ORDER BY donate.id DESC";
 
 $result = mysqli_query($con, $sql);
-
-
-
-
 
 
 

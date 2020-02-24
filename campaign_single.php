@@ -1,5 +1,14 @@
 <?php include('layouts/header.php'); ?>
+<?php
+$id = $_GET['id'];
+include('admin/include/connect.php');
+$con = connect_db();
+$sql = "SELECT* FROM campaign  where `campaign`.`id` = '$id'";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
 
+
+?>
 
         <!--  PAGE HE   ADING -->
 
@@ -43,23 +52,17 @@
                 <article class="post single-post-inner">
 
                     <div class="post-inner-featured-content">
-                        <img alt="" src="asset/images/event_single.jpg">
+                    <img alt="" src="<?php echo "admin/";echo $row['image']; ?>" height="400px">
                     </div>
 
 
                     <div class="single-post-inner-title">
-                        <h2>TITLE</h2>
-                        <p class="single-post-meta"><i class="fa fa-user"></i>&nbsp; CREATOR &nbsp; &nbsp; <i class="fa fa-share"></i>&nbsp; CATEGORY</p>
+                        <h2><?php echo $row['name']; ?></h2>
+                        <p class="single-post-meta"><i class="fa fa-user"></i>&nbsp; CREATOR &nbsp; &nbsp; <i class="fa fa-share"></i>&nbsp; Start Campaign :  <?php echo $row['start_time']; ?></p>
                     </div>
 
                     <div class="single-post-inner-content">
-                    <p>DESCRIPTION</p>        
-                    <p>DESCRIPTION</p>        
-                    <p>DESCRIPTION</p>        
-                    <p>DESCRIPTION</p>        
-                    <p>DESCRIPTION</p>        
-                    <p>DESCRIPTION</p>        
-                    <p>DESCRIPTION</p>        
+                    <?php echo $row['details']; ?>       
                 </div>
 
 
@@ -74,14 +77,14 @@
 
                 <p class="event-content-info">
 
-                    <span class="event-sub-content-title">Date:  <em class="date">August 17, 2016</em></span>
+                    <span class="event-sub-content-title"> Start Date:  <em class="date"><?php echo $row['start_time']; ?></em></span>
+                    <span class="event-sub-content-title"> End Date:  <em class="date"><?php echo $row['end_time']; ?></em></span>
 
                     <span class="event-sub-content-title">Cost:</span>
                     Free 
                     <span class="event-sub-content-title">Event Category:</span>
                     <a href="#">Main Events</a>
-                    <span class="event-sub-content-title">Website:</span>
-                    <a href="#" title="www.codeecstasy.com ">http://www.codeecstasy.com </a> 
+                    
                 </p>
             </div> <!-- end .col-sm-4  -->
 
@@ -94,9 +97,9 @@
                     <span class="event-sub-content-title">Phone:</span>
                     01 4537 8639 243  <br />
                     <span class="event-sub-content-title">Email:</span>
-                    <a href="#" title="info@codeecstasy.com">info@codeecstasy.com </a>
+                    <a href="#" title="info@codeecstasy.com">diu@diu.com </a>
                     <span class="event-sub-content-title">Website:</span>
-                    <a href="#" title="www.codeecstasy.com ">http://booking.codeecstasy.com </a>
+                    <a href="#" title="www.codeecstasy.com ">http://diubloodcenter.com </a>
                 </p>  
 
             </div> <!-- end .col-sm-4  -->
@@ -104,15 +107,14 @@
             <div class="col-sm-4">
 
                 <h4 class="event-content-title">Venue</h4>
-
+                <?php echo $row['location']; ?>
                 <p class="event-content-info">
-                    Almond Street <br />
-                    42 Almond St <br />
-                    Laredo, TX 78041 United States + Google Map <br />
+                   <span class="event-sub-content-title">Email:</span>
+                    <a href="#" title="info@codeecstasy.com">diu@diu.com </a><br />
                     <span class="event-sub-content-title">Phone:</span>
-                    01 8745 4362 329 <br />
+                    ** 8745 4362 *** <br />
                     <span class="event-sub-content-title">Website:</span>
-                    <a href="#" title="www.codeecstasy.com ">http://venue.codeecstasy.com </a>
+                    <a href="#" title="www.codeecstasy.com ">http://diubloodcenter.com  </a>
                 </p>
 
 

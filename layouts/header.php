@@ -87,7 +87,7 @@
                                         animation: blink 1s linear infinite;
                                     }
                                 </style>
-                                <a href="http://localhost/DIU/registration_donor.php">
+                                <a href="http://localhost/DIU/recent_request.php">
 
                                     <font color="red"><b>Recent Request</b></font>
                                 </a>

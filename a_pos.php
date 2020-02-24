@@ -93,10 +93,8 @@ $result = mysqli_query($con, $sql);
 
 
                             <li>
-                                <a href="#">Campaign</a>
-                                <ul class="drop-down">
-                                    <li><a href="http://localhost/DIU/campaigns.php">All Campaigns</a></li>
-                                </ul>
+                                <a href="http://localhost/DIU/campaigns.php">Campaign</a>
+                                
                             </li>
 
                             <li><a href="http://localhost/DIU/blogs.php" title="About Us">Blog</a></li>
@@ -115,7 +113,7 @@ $result = mysqli_query($con, $sql);
                                         animation: blink 1s linear infinite;
                                     }
                                 </style>
-                                <a href="http://localhost/DIU/registration_donor.php">
+                               <a href="http://localhost/DIU/recent_request.php">
 
                                     <font color="red"><b>Recent Request</b></font>
                                 </a>

@@ -1,23 +1,3 @@
-
-
-
-<?php include('admin/include/connect.php'); ?>
-<?php
-
-
-$con = connect_db();
-$sql = "SELECT donor_list.*, donate.date , donate.venue FROM donor_list JOIN donate on donor_list.id = donate.user_id WHERE donor_list.id= donate.user_id AND donor_list.blood_group = 'O-' ORDER BY donate.user_id DESC";
-
-$result = mysqli_query($con, $sql);
-
-
-
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
@@ -43,15 +23,25 @@ $result = mysqli_query($con, $sql);
     <link rel="stylesheet" href="asset/fonts/fontawesome-free/css/all.min.css">
 
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
- 
+
     <link rel="stylesheet" href="asset/extra_css/adminlte.css">
-  
+
 </head>
+
+
+
+
+
+
+
+
+
+
 
 <body>
 
- <!--  HEADER -->
- <header class="main-header clearfix stuck" data-sticky_header="true">
+    <!--  HEADER -->
+    <header class="main-header clearfix stuck" data-sticky_header="true">
         <section class="header-wrapper navgiation-wrapper">
             <div class="navbar navbar-default">
                 <div class="container">
@@ -70,9 +60,10 @@ $result = mysqli_query($con, $sql);
                                 <a href="http://localhost/DIU/" title="Home Layout 01">Home</a>
                             </li>
 
-                            
+
                             <li class="drop"><a href="#">DONOR LIST</a>
                                 <ul class="drop-down">
+                                    <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
                                     <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
                                     <li><a href="http://localhost/DIU/a_neg.php">A– (A negative) </a></li>
                                     <li><a href="http://localhost/DIU/b_pos.php">B+ (B positive) </a></li>
@@ -94,7 +85,7 @@ $result = mysqli_query($con, $sql);
 
                             <li>
                                 <a href="http://localhost/DIU/campaigns.php">Campaign</a>
-                                
+
                             </li>
 
                             <li><a href="http://localhost/DIU/blogs.php" title="About Us">Blog</a></li>
@@ -126,8 +117,8 @@ $result = mysqli_query($con, $sql);
 
         </section>
 
-    <!--  PAGE HE   ADING -->
- </header>
+        <!--  PAGE HE   ADING -->
+    </header>
 
 
 
@@ -139,24 +130,24 @@ $result = mysqli_query($con, $sql);
 
 
 
- 
+
     <section class="page-header">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h3>
-                        DONOR LIST: O- (Negative)
+                        Recent Request for Blood
                     </h3>
                 </div>
             </div> <!-- end .row  -->
         </div> <!-- end .container  -->
     </section> <!-- end .page-header  -->
 
-    
+
 
     <section class="content">
 
- 
+
 
         <!-- Default box -->
         <div class="card card-solid">
@@ -166,68 +157,78 @@ $result = mysqli_query($con, $sql);
 
 
 
-                <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                    <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                        <div class="card bg-light">
-                            <div class="card-header text-muted border-bottom-0">
-                                #DONOR ID : <?php echo $row['id'] ; ?>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <h2 class="lead"><b> <?php echo $row['name'] ; ?></b></h2>
-                                        <h4 class="text-muted text-sm"><b>Blood Group : </b><?php echo $row['blood_group'] ; ?> </h4>
-                                        <h4 class="text-muted text-sm"><b>Donate  Date : </b><?php echo $row['date'] ; ?> </h4>
-                                        <ul class="ml-4 mb-0 fa-ul text-muted">
-                                            <li class="small"><span class="fa-li"></i></span> Address : <?php echo $row['address'] ; ?></li>
-                                            <li class="small"><span class="fa-li"></i></span> Phone #:<?php echo $row['phone'] ; ?></b></li>
-                                            <li class="small"><span class="fa-li"></i></span> Email : <?php echo $row['email'] ; ?></li>
-                                            <li class="small"><span class="fa-li"></i></span> Gender : <?php echo $row['gender'] ; ?></li>
-                                            <li class="small"><span class="fa-li"></i></span> Age : <?php echo $row['age'] ; ?></li>
-                                            <li class="small"><span class="fa-li"></i></span> Donate Venue : <?php echo $row['venue'] ; ?></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-5 text-center">
-                                        <img src="<?php echo "admin/"; echo $row['image']; ?>" alt="" class="img-circle img-fluid">
+                    <?php include('admin/include/connect.php'); ?>
+                    <?php
+
+
+                    $con = connect_db();
+                    $sql = "SELECT * FROM req_for_blood ORDER BY id DESC";
+
+                    $result = mysqli_query($con, $sql);
+
+                    ?>
+                    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    #Request ID : <?php echo $row['id'];  ?>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>User Name: <?php echo $row['name'];  ?></b></h2>
+                                            <h3 class="text-muted text-sm"> Address: <?php echo $row['address'];  ?></h3>
+                                            <h3 class="text-muted text-sm"> Blood Group: <?php echo $row['blood_group'];  ?></h3>
+                                            <h3 class="text-muted text-sm"> Blood Bag: <?php echo $row['blood_bag'];  ?></h3>
+                                            <h3 class="text-muted text-sm">Age : <?php echo $row['age'];  ?> </h3>
+                                            <h3 class="text-muted text-sm"> Gender : <?php echo $row['gender']; ?> </h3>
+                                            <h3 class="text-muted text-sm"> Email :<?php echo $row['email']; ?> </h3>
+                                            <h3 class="text-muted text-sm">Phone No : <?php echo $row['phone']; ?> </h3>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img src="" class="img-circle img-fluid">
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-footer">
-                                <div class="text-right">
-                                   
-                                    <a href="#" class="btn btn-sm btn-primary">
-                                        <i class="fas fa-user"></i> View Profile
-                                    </a>
+                                <div class="card-footer">
+                                    <div class="text-right">
+                                        <a href="mailto:" class="btn btn-sm bg-teal">
+                                            <i class="fas fa-paper-plane"> Send Mail</i>
+                                        </a>
+                                        <a href="tel:" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-phone"></i> Call Now
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>  
-                       
-                    </div>
-                    
-                    
 
-                       
-                    </div>
+                    <?php } ?>
                 </div>
+
+
+
+
             </div>
-            <!-- /.card-body -->
-            <div class="card-footer">
-                <nav aria-label="Contacts Page Navigation">
-                    <ul class="pagination justify-content-center m-0">
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">6</a></li>
-                        <li class="page-item"><a class="page-link" href="#">7</a></li>
-                        <li class="page-item"><a class="page-link" href="#">8</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- /.card-footer -->
+        </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <nav aria-label="Contacts Page Navigation">
+                <ul class="pagination justify-content-center m-0">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /.card-footer -->
         </div>
         <!-- /.card -->
 
