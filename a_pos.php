@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
@@ -41,19 +46,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="logo" href="http://localhost/blood_center_web_view/public/"><img alt="" src="asset/images/logo.png"> </a>
+                        <a class="logo" href="http://localhost/DIU/"><img alt="" src="asset/images/logo.png"> </a>
                     </div>
 
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="drop">
-                                <a href="http://localhost/blood_center_web_view/public/" title="Home Layout 01">Home</a>
+                                <a href="http://localhost/DIU/" title="Home Layout 01">Home</a>
                             </li>
 
                             
                             <li class="drop"><a href="#">DONOR LIST</a>
                                 <ul class="drop-down">
-                                    <li><a href="http://localhost/blood_center_web_view/public/a_pos.php">A+ (A positive)</a></li>
+                                    <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
                                     <li><a href="gallery-2.html">A– (A negative) </a></li>
                                     <li><a href="gallery-2.html">B+ (B positive) </a></li>
                                     <li><a href="gallery-2.html">B– (B negative) </a></li>
@@ -75,14 +80,14 @@
                             <li>
                                 <a href="#">Campaign</a>
                                 <ul class="drop-down">
-                                    <li><a href="http://localhost/blood_center_web_view/public/campaigns.php">All Campaigns</a></li>
+                                    <li><a href="http://localhost/DIU/campaigns.php">All Campaigns</a></li>
                                 </ul>
                             </li>
 
-                            <li><a href="http://localhost/blood_center_web_view/public/blogs.php" title="About Us">Blog</a></li>
-                            <li><a href="http://localhost/blood_center_web_view/public/about.php" title="About Us">About Us</a></li>
+                            <li><a href="http://localhost/DIU/blogs.php" title="About Us">Blog</a></li>
+                            <li><a href="http://localhost/DIU/about.php" title="About Us">About Us</a></li>
 
-                            <li><a href="http://localhost/blood_center_web_view/public/contact.php">Contact US</a></li>
+                            <li><a href="http://localhost/DIU/contact.php">Contact US</a></li>
                             <li id="blink">
                                 <style>
                                     @keyframes blink {
@@ -95,7 +100,7 @@
                                         animation: blink 1s linear infinite;
                                     }
                                 </style>
-                                <a href="http://localhost/blood_center_web_view/public/registration_donor.php">
+                                <a href="http://localhost/DIU/registration_donor.php">
 
                                     <font color="red"><b>Recent Request</b></font>
                                 </a>

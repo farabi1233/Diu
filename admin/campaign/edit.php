@@ -7,7 +7,7 @@ $id = $_GET['id'];
 include('../include/connect.php');
 $con = connect_db();
 
-$sql = "SELECT* FROM campaign ";
+$sql = "SELECT* FROM campaign  where id = '$id'";
 
 $result = mysqli_query($con, $sql);
 

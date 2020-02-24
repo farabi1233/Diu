@@ -8,7 +8,7 @@
 
 
 <head>
-    <title>Mentor - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Admin Panal</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Admin template that can be used to build dashboards for CRM, CMS, etc." />
@@ -87,6 +87,7 @@
                                     <li > <a href='<?php echo $url; ?>donor/create.php'>Add Donor</a> </li>
                                     <li > <a href='<?php echo $url; ?>campaign/create.php'>Add Campaign </a> </li>
                                     <li > <a href='<?php echo $url; ?>blog/create.php'>Add Blog </a> </li>
+                                    <li > <a href='<?php echo $url; ?>donate/create.php'>Add Donate Data </a> </li>
                                 </ul>
                             </li>
                             

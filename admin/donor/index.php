@@ -8,7 +8,7 @@
 <?php include('../include/connect.php'); ?>
 <?php
 $con = connect_db();
-$sql = "SELECT donor_list.*, blood_group.blood_group FROM donor_list JOIN blood_group on donor_list.blood_id =blood_group.id ";
+$sql = "SELECT* FROM donor_list ORDER BY id DESC ";
 $result = mysqli_query($con, $sql);
 ?>
 <div class="row">

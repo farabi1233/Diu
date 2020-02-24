@@ -3,13 +3,11 @@
 $id = $_GET['id'];
 include('../include/connect.php');
 $con = connect_db();
-$sql = "SELECT donor_list.*, blood_group.blood_group FROM donor_list JOIN blood_group on donor_list.blood_id =blood_group.id where donor_list.id = '$id'  ";
+$sql = "SELECT* FROM donor_list  where id = '$id'";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 ?>
 <?php
-$sql_bg = "Select id as bg_id, blood_group as bg FROM blood_group; ";
-$result_bg = mysqli_query($con, $sql_bg);
 
 ?>
 
@@ -28,15 +26,25 @@ $result_bg = mysqli_query($con, $sql_bg);
             </div>
             <div class="form-group">
                 <label for="name">Blood Group: (required)</label>
-                <select required type="text" class="form-control" name="blood_group_id">
-                    <?php while ($row_bg = mysqli_fetch_assoc($result_bg)) {  ?>
-                        <?php if ($row_bg['bg_id'] == $row['blood_id']) { ?>
-                            <option value="<?php echo $row_bg['bg_id']  ?>"> <?php echo $row_bg['bg']  ?> </option>
-                        <?php } else { ?>
-                            <option value="<?php echo $row_bg['bg_id']  ?>"> <?php echo $row_bg['bg']  ?> </option>
-                        <?php  } ?>
-                    <?php   }
-                    ?>
+                <select required type="text" class="form-control" name="blood_group">
+                    
+                        
+                <option  selected value="<?php echo $row['blood_group'];  ?>"><?php echo $row['blood_group'];  ?></option>
+                           
+                           <option value="O+">O+</option>
+                           <option value="O-">O-</option>
+                           <option value="A+">A+</option>
+                           <option value="A-">A-</option>
+                           <option value="B+">B+</option>
+                           <option value="B-">B-</option>
+                           <option value="AB+">AB+</option>
+                           <option value="AB-">AB-</option>
+                          
+
+                       
+                               
+
+                  
                 </select>
             </div>
             <div class="form-group">

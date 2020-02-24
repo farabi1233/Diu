@@ -2,7 +2,7 @@
 <?php include('../include/connect.php'); ?>
 <?php
 $con = connect_db();
-$sql = "SELECT * FROM `blog`";
+$sql = "SELECT * FROM blog ORDER BY id DESC";
 $result = mysqli_query($con, $sql);
 ?>
 <div class="row">
@@ -24,15 +24,14 @@ $result = mysqli_query($con, $sql);
                         <?php $sl = 1 ?>
                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                             <tr>
-                                <td><?php echo $sl; ?></td>
-                                <td><?php $y= $row['title']; echo substr("$y",0,14)  ;  ?>...</td>
+                                <td><h5><?php echo $sl; ?></h5></td>
+                                <td><h5><?php $y= $row['title']; echo substr("$y",0,14)  ;  ?></h5>...</td>
                              
 
 
 
-                                <td><?php $x= $row['description']; echo substr("$x",0,14)  ; ?>...</td>
-                                <td><?php 
-                                echo $row['date']; ?></td>
+                                <td><h5><?php $x= $row['description']; echo substr("$x",0,14)  ; ?></h5>...</td>
+                                <td><h5><?php  echo $row['date']; ?></h5></td>
                                 <td><img src="<?php echo "../";
                                  echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>

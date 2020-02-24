@@ -4,7 +4,7 @@
 
 
 $con = connect_db();
-$sql = "SELECT * FROM `donate`";
+$sql = "SELECT donate.*, donor_list.name as name, donor_list.blood_group as blood_group  FROM donor_list JOIN donate on donor_list.id = donate.user_id WHERE donor_list.id= donate.user_id ORDER BY donate.user_id DESC";
 
 $result = mysqli_query($con, $sql);
 
@@ -31,10 +31,13 @@ $result = mysqli_query($con, $sql);
                     <table class="table">
                         <tr>
                             <th>SL No.</th>
-                            <th>Id</th>
-                            <th>Date  </th>
+                            <th>User ID</th>
+                            <th>User Name  </th>
+                            <th> Blood Group </th>
+                            <th> Donate Date </th>
                             <th> Venue </th>
                             <th> Action </th>
+
 
 
                         </tr>
@@ -44,9 +47,12 @@ $result = mysqli_query($con, $sql);
                             <tr>
                                 <td><?php echo $sl; ?></td>
 
-                                <td><?php echo $row['user_id']; ?></td>
-                                <td><?php echo $row['date']; ?></td>
-                                <td><?php echo $row['venue']; ?></td>
+                                <td><h5><?php echo $row['user_id']; ?></h5></td>
+                                <td><h5><?php echo $row['name']; ?></h5></td>
+                               
+                                <td><h5><?php echo $row['blood_group']; ?></h5></td>
+                                <td><h5><?php echo $row['date']; ?></h5></td>
+                                <td><h5><?php echo $row['venue']; ?></h5></td>
                                 
 
                                 <td>

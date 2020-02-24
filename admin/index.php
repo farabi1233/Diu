@@ -1,5 +1,10 @@
-<?php $url = 'http://localhost/DIU/admin/'; ?>
-
+<?php $url = 'http://localhost/DIU/admin/';
+include('include/connect.php');
+$con = connect_db();
+//$sql = "SELECT* FROM blog  where `blog`.`id` = '$id'";
+// $result = mysqli_query($con, $sql);
+// $row = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +31,7 @@
     <div class="app">
         <!-- begin app-wrap -->
         <div class="app-wrap">
-            
+
             <!-- begin app-header -->
             <header class="app-header top-bar">
                 <!-- begin navbar -->
@@ -57,12 +62,12 @@
                     <!-- begin navigation -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="navigation d-flex">
-                           
-                           
+
+
                         </div>
                     </div>
                     <!-- end navigation -->
-              </nav>
+                </nav>
                 <!-- end navbar -->
             </header>
             <!-- end app-header -->
@@ -78,33 +83,34 @@
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                                     <i class="nav-icon ti ti-rocket"></i>
                                     <span class="nav-title">Add Data</span>
-                                    
+
                                 </a>
                                 <ul aria-expanded="false">
                                     <li class="active"> <a href='<?php echo $url; ?>donor/create.php'>Add Donor</a> </li>
                                     <li> <a href='<?php echo $url; ?>campaign/create.php'>Add Campaign </a> </li>
                                     <li> <a href='<?php echo $url; ?>blog/create.php'>Add Blog </a> </li>
+                                    <li > <a href='<?php echo $url; ?>donate/create.php'>Add Donate Data </a> </li>
                                 </ul>
                             </li>
-                            
-                            
-                            
-                            
-                            
+
+
+
+
+
                             <li>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-layout-column3-alt"></i><span class="nav-title">Show Data</span></a>
                                 <ul aria-expanded="false">
-                                <li > <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
-                                <li > <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
-                                <li > <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
-                                <li > <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
-                                <li > <a href="<?php echo $url; ?>blood_req/index.php">Request For Blood</a> </li>
-                                <li > <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
+                                    <li class="active"> <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
+                                    <li> <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
+                                    <li> <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
+                                    <li> <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
+                                    <li> <a href="<?php echo $url; ?>blood_req/index.php">Request For Blood</a> </li>
+                                    <li> <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
 
                                 </ul>
                             </li>
-                           
-                           
+
+
                         </ul>
                     </div>
                     <!-- end sidebar-nav -->
@@ -130,7 +136,7 @@
                                     <div class="page-title mr-4 pr-4 border-right">
                                         <h1>Dashboard</h1>
                                     </div>
-                                     <!-- icon  start-->
+                                    <!-- icon  start-->
                                     <div class="ml-auto d-flex align-items-center secondary-menu text-center">
                                         <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Todo list">
                                             <i class="fe fe-edit btn btn-icon text-primary"></i>
@@ -153,7 +159,7 @@
                                 <!-- end page title -->
                             </div>
                         </div>
-                    
+
                         <!-- end row -->
                         <!-- begin row -->
                         <div class="row">
@@ -168,7 +174,7 @@
                                         <div class="col-xxl-3 col-lg-6">
                                             <div class="p-20 border-lg-right border-bottom border-xxl-bottom-0">
                                                 <div class="d-flex m-b-10">
-                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Visits</p>
+                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Donor</p>
                                                     <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
                                                 </div>
                                                 <div class="d-block d-sm-flex h-100 align-items-center">
@@ -176,8 +182,23 @@
                                                         <div id="analytics7"></div>
                                                     </div>
                                                     <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
-                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle"></i> 15,640</h3>
-                                                        <p>Monthly visitor</p>
+                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle">
+
+                                                                <?php
+
+                                                                $sql = "SELECT* FROM donor_list ;";
+                                                                $result = mysqli_query($con, $sql);
+                                                                $donor = 0;
+                                                                while ($x = mysqli_fetch_assoc($result)) {
+                                                                    $donor++;
+                                                                }
+
+                                                                ?>
+
+
+
+                                                            </i> <?php echo $donor;  ?> </h3>
+                                                        <p></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,7 +206,7 @@
                                         <div class="col-xxl-3 col-lg-6">
                                             <div class="p-20 border-xxl-right border-bottom border-xxl-bottom-0">
                                                 <div class="d-flex m-b-10">
-                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Cost</p>
+                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Request For Blood (By User)</p>
                                                     <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
                                                 </div>
                                                 <div class="d-block d-sm-flex h-100 align-items-center">
@@ -193,7 +214,19 @@
                                                         <div id="analytics8"></div>
                                                     </div>
                                                     <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
-                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle"></i> 16,656</h3>
+
+                                                        <?php
+
+                                                        $sql = "SELECT* FROM req_for_blood ;";
+                                                        $result = mysqli_query($con, $sql);
+                                                        $req = 0;
+                                                        while ($x = mysqli_fetch_assoc($result)) {
+                                                            $req++;
+                                                        }
+
+                                                        ?>
+
+                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle"></i> <?php echo $req;  ?></h3>
                                                         <p>This month</p>
                                                     </div>
                                                 </div>
@@ -202,7 +235,7 @@
                                         <div class="col-xxl-3 col-lg-6">
                                             <div class="p-20 border-lg-right border-bottom border-lg-bottom-0">
                                                 <div class="d-flex m-b-10">
-                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Sales</p>
+                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Number of Donate </p>
                                                     <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
                                                 </div>
                                                 <div class="d-block d-sm-flex h-100 align-items-center">
@@ -210,72 +243,98 @@
                                                         <div id="analytics9"></div>
                                                     </div>
                                                     <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
-                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle"></i>569</h3>
-                                                        <p>Avg. Sales per day</p>
+                                                        <?php
+
+                                                        $sql = "SELECT* FROM donate ;";
+                                                        $result = mysqli_query($con, $sql);
+                                                        $donate = 0;
+                                                        while ($x = mysqli_fetch_assoc($result)) {
+                                                            $donate++;
+                                                        }
+
+                                                        ?>
+
+                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle"></i><?php echo $donate ?></h3>
+                                                        <p></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xxl-3 col-lg-6">
-                                            <div class="p-20">
+                                            <div class="p-20 border-lg-right border-bottom border-xxl-bottom-0">
+                                                <div class="d-flex m-b-10">
+                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Campaign</p>
+                                                    <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
+                                                </div>
                                                 <div class="d-block d-sm-flex h-100 align-items-center">
                                                     <div class="apexchart-wrapper">
-                                                        <div id="analytics10"></div>
+                                                        <div id="analytics7"></div>
                                                     </div>
-                                                    <div class="statistics ml-sm-auto mt-4 mt-sm-0 pr-sm-5">
-                                                        <ul class="list-style-none p-0">
-                                                            <li class="d-flex py-1">
-                                                                <span><i class="fa fa-circle text-primary pr-2"></i> Redirect Visits</span> <span class="pl-2 font-weight-bold">456</span></li>
-                                                            <li class="d-flex py-1"><span><i class="fa fa-circle text-warning pr-2"></i> New Visits</span> <span class="pl-2 font-weight-bold">256</span></li>
-                                                            <li class="d-flex py-1"><span><i class="fa fa-circle text-info pr-2"></i> Direct Visits</span> <span class="pl-2 font-weight-bold">128</span></li>
-                                                        </ul>
+                                                    <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
+                                                        <h3 class="mb-0"><i class="icon-arrow-up-circle">
+
+                                                                <?php
+
+                                                                $sql = "SELECT* FROM campaign ;";
+                                                                $result = mysqli_query($con, $sql);
+                                                                $camp = 0;
+                                                                while ($x = mysqli_fetch_assoc($result)) {
+                                                                    $camp++;
+                                                                }
+
+                                                                ?>
+
+
+
+                                                            </i> <?php echo $camp;  ?> </h3>
+                                                        <p></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div></div>
                                         <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="verticalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="verticalCenterTitle">Add New Event</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="modelemail">Event Name</label>
-                                                <input type="email" class="form-control" id="modelemail">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Choose Event Color</label>
-                                                <select class="form-control">
-                                                    <option>Primary</option>
-                                                    <option>Warning</option>
-                                                    <option>Success</option>
-                                                    <option>Danger</option>
-                                                </select>
-                                            </div>
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="verticalCenterTitle">Add New Event</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <label for="modelemail">Event Name</label>
+                                                                <input type="email" class="form-control" id="modelemail">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Choose Event Color</label>
+                                                                <select class="form-control">
+                                                                    <option>Primary</option>
+                                                                    <option>Warning</option>
+                                                                    <option>Success</option>
+                                                                    <option>Danger</option>
+                                                                </select>
+                                                            </div>
 
-                                        </form>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-success">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-success">Save changes</button>
-                                    </div>
+                                    <!-- end container-fluid -->
                                 </div>
+                                <!-- end app-main -->
                             </div>
-                        </div>
-                    </div>
-                    <!-- end container-fluid -->
-                </div>
-                <!-- end app-main -->
-            </div>
-            <!-- end app-container -->
-            <!-- begin footer -->
-            <!-- <footer class="footer">
+                            <!-- end app-container -->
+                            <!-- begin footer -->
+                            <!-- <footer class="footer">
                 <div class="row">
                     <div class="col-12 col-sm-6 text-center text-sm-left">
                         <p>&copy; Copyright 2019. All rights reserved.</p>
@@ -285,17 +344,17 @@
                     </div>
                 </div>
             </footer> -->
-            <!-- end footer -->
-        </div>
-        <!-- end app-wrap -->
-    </div>
-    <!-- end app -->
+                            <!-- end footer -->
+                        </div>
+                        <!-- end app-wrap -->
+                    </div>
+                    <!-- end app -->
 
-    <!-- plugins -->
-    <script src="assets/js/vendors.js"></script>
+                    <!-- plugins -->
+                    <script src="assets/js/vendors.js"></script>
 
-    <!-- custom app -->
-    <script src="assets/js/app.js"></script>
+                    <!-- custom app -->
+                    <script src="assets/js/app.js"></script>
 </body>
 
 

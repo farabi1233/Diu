@@ -5,12 +5,13 @@
 <?php
 $id = $_POST['id'];
 $name = $_POST['name'];
-$blood_group_id = $_POST['blood_group_id'];
+$blood_group = $_POST['blood_group'];
 $age = $_POST['age'];
 $gender = $_POST['gender'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
-$address = $_POST['address'];
+ $address = $_POST['address'];
+
 include('../include/connect.php');
 $con = connect_db();
 $sql = "SELECT * FROM `donor_list` WHERE id ='$id';";
@@ -21,7 +22,7 @@ $row = mysqli_fetch_assoc($result);
 if (empty($_FILES['image']['name'])) {
 
 
-    $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address'  WHERE `donor_list`.`id` = '$id'";
+    $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_group` = '$blood_group',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address'  WHERE `id` = '$id'";
     mysqli_query($con, $sql_insert);
 
     header("Location:index.php");
@@ -42,7 +43,7 @@ if (empty($_FILES['image']['name'])) {
         //exit;
         unlink('../uploads/' . str_replace('uploads/', '', $row['image']));
     }
-    $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_id` = '$blood_group_id',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address',`image` = '$image'  WHERE `donor_list`.`id` = '$id'";
+    $sql_insert = "UPDATE `donor_list` SET `id`='$id', `name` = '$name',`blood_group` = '$blood_group',`age` = '$age',`gender` = '$gender',`phone` = '$phone',`email` = '$email',`address` = '$address',`image` = '$image'  WHERE `id` = '$id'";
     mysqli_query($con, $sql_insert);
 
     header("Location:index.php");

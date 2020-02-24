@@ -8,12 +8,14 @@
 <?php include('../include/connect.php'); ?>
 <?php
 $con = connect_db();
-$sql = "SELECT * FROM req_for_blood ";
+$sql = "SELECT * FROM req_for_blood ORDER BY id DESC ";
 $result = mysqli_query($con, $sql);
-$row = mysqli_fetch_assoc($result);
+
 
 
 ?>
+
+
 <div class="row">
     <div class="col-ld-12">
         <div class="card card-statistics">

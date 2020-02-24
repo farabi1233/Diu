@@ -8,7 +8,7 @@
 <?php include('../include/connect.php'); ?>
 <?php
 $con = connect_db();
-$sql = "SELECT * FROM reg_donor  ";
+$sql = "SELECT * FROM reg_donor ORDER BY id DESC  ";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 

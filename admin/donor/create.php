@@ -5,9 +5,7 @@
 
 
 include('../include/connect.php');
-$con = connect_db();
-$sql = "SELECT * FROM blood_group ;";
-$result = mysqli_query($con, $sql);
+
 
 
 
@@ -23,22 +21,29 @@ $result = mysqli_query($con, $sql);
                     <h2>Add New Donor </h2>
                     <hr>
                     <form action="store.php" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="name">ID: (required)</label>
-                            <input required type="text" class="form-control" name="id" placeholder="Enter ID">
-                        </div>
+                        
                         <div class="form-group">
                             <label for="name">Name: (required)</label>
                             <input required type="text" class="form-control" name="name" placeholder="Enter Donor Name">
                         </div>
                         <div class="form-group">
                             <label for="name">Blood Group: (required)</label>
-                            <select required type="text" class="form-control" name="blood_group_id">
-                                <option value="">Select Blood Group ...</option>
-                                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                                    <option value="<?php echo $row['id']  ?>"><?php echo $row['blood_group']  ?></option>
-                                <?php       } ?>
-                            </select>
+                            <select class="form-control" name="blood_group">
+                            <option disabled selected>Blood Group</option>
+                           
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                               
+
+                            
+
+                        </select>
                         </div>
                         <div class="form-group">
                             <label for="name">Age</label>

@@ -19,29 +19,34 @@ $con = connect_db();
 
             <div class="card">
                 <div class="card-body">
-                    <h2>Add New Donor :</h2>
+                    <h2>Add Donate Info :</h2>
                     <hr>
                     <form action="store.php" method="POST" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <label for="name">User Id</label>
-                            <input type="text" class="form-control" name="user_id" placeholder="Enter Donor User ID">
+                            <input type="text" class="form-control" name="user_id" placeholder="Enter Donor  ID">
                         </div>
 
 
                         <div class="form-group">
 
 
-                            <label for="name">Date</label>
+                            <label for="name">Date :</label>
                             <input type="date" class="form-control" id="e" name="date" placeholder="Donate Date">
                             <script>
                                 document.getElementById('e').value = new Date().toISOString().substring(0, 10);
                             </script>
                         </div>
 
+                       
+
+
+                          
+
                         <div class="form-group">
-                            <label for="name">Venue</label>
-                            <select type="text" class="form-control" name="venue">
+                            <label for="name">Venue : (required)</label>
+                            <select required type="text" class="form-control" name="venue">
                                 <option value="" disabled selected>Select Venue ...</option>
 
                                 <option value="Permanent Campus">Permanent Campus</option>

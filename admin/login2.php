@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <title>login</title>
-
     <style>
         body {
             background-color: #3498DB
         }
 
+
+        p {
+            color: #FDFEFE ;
+            background-color: #CB4335 ;
+            text-align: center;
+        }
     </style>
-    
 </head>
 
 <body>
@@ -41,7 +45,10 @@
                                         <label for="name">Password</label>
                                         <input type="password" class="form-control" name="password" placeholder="Enter Password">
                                     </div>
-                                    
+                                    <div>
+                                        <p><b>Email or Password id Wrong! please try again</b></p>
+                                    </div>
+
 
 
 

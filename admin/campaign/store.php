@@ -19,7 +19,7 @@ $id = $_POST['id'];
 
 include('../include/connect.php');
 $con = connect_db();
-$sql = "INSERT INTO `campaign` (`id`, `name`, `details`, `start_time`, `end_time`, `location`, `image`) VALUES ('$id', '$name ', '$details ', '$start', '$end', '$location', '$image');";
+$sql = "INSERT INTO `campaign` ( `name`, `details`, `start_time`, `end_time`, `location`, `image`) VALUES ( '$name ', '$details ', '$start', '$end', '$location', '$image');";
 if(mysqli_query($con, $sql)){
     header("Location: index.php");
 }

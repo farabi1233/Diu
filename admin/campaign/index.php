@@ -26,12 +26,12 @@ $result = mysqli_query($con, $sql);
                         <?php $sl = 1 ?>
                         <?php while ($row = mysqli_fetch_assoc($result)) {; ?>
                             <tr>
-                                <td><?php echo $sl; ?></td>
-                                <td><?php echo $row['name']; ?></td>
-                                <td><?php echo $row['details']; ?></td>
-                                <td><?php echo $row['start_time']; ?></td>
-                                <td><?php echo $row['end_time']; ?></td>
-                                <td><?php echo $row['location']; ?></td>
+                                <td><h5><?php echo $sl; ?></h5></td>
+                                <td><h5><?php echo $row['name']; ?></h5></td>
+                                <td><h5><?php echo $row['details']; ?></h5></td>
+                                <td><h5><?php echo $row['start_time']; ?></h5></td>
+                                <td><h5><?php echo $row['end_time']; ?></h5></td>
+                                <td><h5><?php echo $row['location']; ?></h5></td>
                                 <td><img src="<?php echo "../";
                                 echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>
