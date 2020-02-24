@@ -6,7 +6,7 @@
 
 
 $con = connect_db();
-$sql = "SELECT donor_list.*, donate.date , donate.venue FROM donor_list JOIN donate on donor_list.id = donate.user_id WHERE donor_list.id= donate.user_id AND donor_list.blood_group = 'A+' ORDER BY donate.user_id DESC";
+$sql = "SELECT donor_list.*, donate.date , donate.venue FROM donor_list JOIN donate on donor_list.id = donate.user_id WHERE donor_list.id= donate.user_id AND donor_list.blood_group = 'B-' ORDER BY donate.user_id DESC";
 
 $result = mysqli_query($con, $sql);
 
@@ -147,7 +147,7 @@ $result = mysqli_query($con, $sql);
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h3>
-                        DONOR LIST: A+ (Positive)
+                        DONOR LIST: B- (Negative)
                     </h3>
                 </div>
             </div> <!-- end .row  -->

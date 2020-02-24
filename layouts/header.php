@@ -47,14 +47,14 @@
                             
                             <li class="drop"><a href="#">DONOR LIST</a>
                                 <ul class="drop-down">
-                                    <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
-                                    <li><a href="gallery-2.html">A– (A negative) </a></li>
-                                    <li><a href="gallery-2.html">B+ (B positive) </a></li>
-                                    <li><a href="gallery-2.html">B– (B negative) </a></li>
-                                    <li><a href="gallery-2.html">AB+ (AB positive) </a></li>
-                                    <li><a href="gallery-2.html">AB– (AB negative) </a></li>
-                                    <li><a href="gallery-2.html">O+ (O positive) </a></li>
-                                    <li><a href="gallery-2.html">O– (O negative)</a></li>
+                                <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
+                                    <li><a href="http://localhost/DIU/a_neg.php">A– (A negative) </a></li>
+                                    <li><a href="http://localhost/DIU/b_pos.php">B+ (B positive) </a></li>
+                                    <li><a href="http://localhost/DIU/b_neg.php">B– (B negative) </a></li>
+                                    <li><a href="http://localhost/DIU/ab_pos.php">AB+ (AB positive) </a></li>
+                                    <li><a href="http://localhost/DIU/ab_neg.php">AB– (AB negative) </a></li>
+                                    <li><a href="http://localhost/DIU/o_pos.php">O+ (O positive) </a></li>
+                                    <li><a href="http://localhost/DIU/o_neg.php">O– (O negative)</a></li>
                                 </ul>
                             </li>
 
