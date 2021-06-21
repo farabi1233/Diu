@@ -28,14 +28,14 @@ $result = mysqli_query($con, $sql);
                             <tr>
                                 <td><h5><?php echo $sl; ?></h5></td>
                                 <td><h5><?php echo $row['name']; ?></h5></td>
-                                <td><h5><?php echo $row['details']; ?></h5></td>
+                                <td><h5><?php $x= $row['details']; echo substr("$x",0,14) ?></h5></td>
                                 <td><h5><?php echo $row['start_time']; ?></h5></td>
                                 <td><h5><?php echo $row['end_time']; ?></h5></td>
                                 <td><h5><?php echo $row['location']; ?></h5></td>
                                 <td><img src="<?php echo "../";
                                 echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>
-                                    <a href="show.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
+                                    <a href="/campaign_single.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
                                     <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
                                     <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this Data?');">Delete</a>
                                 </td>

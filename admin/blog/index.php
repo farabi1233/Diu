@@ -35,7 +35,7 @@ $result = mysqli_query($con, $sql);
                                 <td><img src="<?php echo "../";
                                  echo $row['image']; ?>" alt="" width="100px" height="80px"></td>
                                 <td>
-                                    <a href="show.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
+                                    <a href="/single_blog.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
                                     <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
                                     <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this Data?');">Delete</a>
                                 </td>

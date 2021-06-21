@@ -8,7 +8,7 @@
 <?php include('../include/connect.php'); ?>
 <?php
 $con = connect_db();
-$sql = "SELECT * FROM reg_donor ORDER BY id DESC  ";
+$sql = "SELECT * FROM reg_donor ORDER BY id   ";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -36,6 +36,7 @@ $row = mysqli_fetch_assoc($result);
                             <th>Action </th>
                         </tr>
                         <?php $sl = 1 ?>
+                        
                         <?php while ($row = mysqli_fetch_assoc($result)) {; ?>
                             <tr>
                                 <td>

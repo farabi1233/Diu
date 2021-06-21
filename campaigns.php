@@ -110,11 +110,11 @@ $result = mysqli_query($con, $sql);
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                        <h2>We are helping people from 40 years</h2>
+                        <h2>Donate Blood , Safe Life</h2>
                         <p>
-                            You can give blood at any of our blood donation venues all over the world. We have total sixty thousands donor centers and visit thousands of other venues on various occasions.                            
+                            You can give blood at any of our blood donation venues!                        
                         </p>
-                        <a class="btn btn-cta-2" href="#">BECOME VOLUNTEER</a>
+                        <a class="btn btn-cta-2" href="mailto:admin@diublood.com">BECOME VOLUNTEER</a>
                     </div> <!--  end .col-md-8  -->
                 </div> <!--  end .row  -->
             </div>

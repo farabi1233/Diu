@@ -20,5 +20,5 @@ include('admin/include/connect.php');
 $con = connect_db();
 $sql = "INSERT INTO `reg_donor` (`id`, `name`, `age`, `email`, `phone`, `gender`, `blood_group`, `image`, `address`) VALUES (NULL, '$name ', '$age ', '$email', '$phone', '$gender', '$blood_group ', '$image ', '$address');";
 if (mysqli_query($con, $sql)) {
-    header("Location: index.php");
+    header("Location: success_donor.php");
 }

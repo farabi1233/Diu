@@ -1,76 +1,75 @@
+<!-- START FOOTER  -->
 
-        <!-- START FOOTER  -->
+<footer>
 
-        <footer>            
 
-  
 
-            <!--FOOTER CONTENT  -->
+    <!--FOOTER CONTENT  -->
 
-            <section class="footer-contents">
-                
-            <div class="container">
-                    
+    <section class="footer-contents">
 
-                </div> <!--  end .container -->
-                <div class="container">
+        <div class="container">
 
-                    <div class="row clearfix">
 
-                        <div class="col-md-6 col-sm-12">
-                            <p class="copyright-text"> Copyright © 2020, All Right Reserved - by DIU_BLOOD_CENTER </p>
+        </div> <!--  end .container -->
+        <div class="container">
 
-                        </div>  <!-- end .col-sm-6  -->
+            <div class="row clearfix">
 
-                        <div class="col-md-6 col-sm-12 text-right">
-                            <div class="footer-nav">
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <a href="index.html">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Causes</a>
-                                        </li>
-                                        <li>
-                                            <a href="donate.html">Events</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-with-sidebar.html">Gallery</a>
-                                        </li>
-                                        <li>
-                                            <a href="campaign-grid.html">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">Contact</a>
-                                        </li>
-                                        <li>
-                                        <div class="top-bar-social">
-                            
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
-                                            <a href="#"><i class="fa fa-youtube"></i></a>
-                                        </li>
-                                        </div>   
-                                    </ul>
-                                </nav>
-                            </div> <!--  end .footer-nav  -->
-                        </div> <!--  end .col-lg-6  -->
+                <div class="col-md-6 col-sm-12">
+                    <p class="copyright-text"> Copyright © 2020, All Right Reserved - by DIU_BLOOD_CENTER </p>
 
-                    </div> <!-- end .row  -->                                    
+                </div> <!-- end .col-sm-6  -->
 
-                </div> <!--  end .container  -->
+                <div class="col-md-6 col-sm-12 text-right">
+                    <div class="footer-nav">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="campaigns.php">Campaigns</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="blogs.php">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="contact.php">Contact</a>
+                                </li>
+                                <li>
+                                    <div class="top-bar-social">
 
-            </section> <!--  end .footer-content  -->
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa fa-youtube"></i></a>
+                                </li>
+                    </div>
+                    </ul>
+                    </nav>
+                </div> <!--  end .footer-nav  -->
+            </div> <!--  end .col-lg-6  -->
 
-        </footer>
+        </div> <!-- end .row  -->
 
-        <!-- END FOOTER  -->
+        </div> <!--  end .container  -->
 
-     
-    </body>
+    </section> <!--  end .footer-content  -->
+
+</footer>
+
+<!-- END FOOTER  -->
+
+
+</body>
 
 
 </html>

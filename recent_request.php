@@ -1,136 +1,4 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
-
-
-<head>
-    <meta charset="utf-8">
-    <title>DIU Blood Center</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="DIU Blood Center">
-    <meta name="author" content="xenioushk">
-    <link rel="shortcut icon" href="asset/images/favicon.png" />
-    <!-- The styles Start-->
-    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
-    <link href="asset/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="asset/css/animate.css" rel="stylesheet" type="text/css">
-    <link href="asset/css/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link href="asset/css/venobox.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="asset/css/styles.css" />
-
-    <link rel="stylesheet" href="asset/fonts/fontawesome-free/css/all.min.css">
-
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
-    <link rel="stylesheet" href="asset/extra_css/adminlte.css">
-
-</head>
-
-
-
-
-
-
-
-
-
-
-
-<body>
-
-    <!--  HEADER -->
-    <header class="main-header clearfix stuck" data-sticky_header="true">
-        <section class="header-wrapper navgiation-wrapper">
-            <div class="navbar navbar-default">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="logo" href="http://localhost/DIU/"><img alt="" src="asset/images/logo.png"> </a>
-                    </div>
-
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="drop">
-                                <a href="http://localhost/DIU/" title="Home Layout 01">Home</a>
-                            </li>
-
-
-                            <li class="drop"><a href="#">DONOR LIST</a>
-                                <ul class="drop-down">
-                                    <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
-                                    <li><a href="http://localhost/DIU/a_pos.php">A+ (A positive)</a></li>
-                                    <li><a href="http://localhost/DIU/a_neg.php">A– (A negative) </a></li>
-                                    <li><a href="http://localhost/DIU/b_pos.php">B+ (B positive) </a></li>
-                                    <li><a href="http://localhost/DIU/b_neg.php">B– (B negative) </a></li>
-                                    <li><a href="http://localhost/DIU/ab_pos.php">AB+ (AB positive) </a></li>
-                                    <li><a href="http://localhost/DIU/ab_neg.php">AB– (AB negative) </a></li>
-                                    <li><a href="http://localhost/DIU/o_pos.php">O+ (O positive) </a></li>
-                                    <li><a href="http://localhost/DIU/o_neg.php">O– (O negative)</a></li>
-                                </ul>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li>
-                                <a href="http://localhost/DIU/campaigns.php">Campaign</a>
-
-                            </li>
-
-                            <li><a href="http://localhost/DIU/blogs.php" title="About Us">Blog</a></li>
-                            <li><a href="http://localhost/DIU/about.php" title="About Us">About Us</a></li>
-
-                            <li><a href="http://localhost/DIU/contact.php">Contact US</a></li>
-                            <li id="blink">
-                                <style>
-                                    @keyframes blink {
-                                        50% {
-                                            opacity: .369
-                                        }
-                                    }
-
-                                    #blink {
-                                        animation: blink 1s linear infinite;
-                                    }
-                                </style>
-                                <a href="http://localhost/DIU/recent_request.php">
-
-                                    <font color="red"><b>Recent Request</b></font>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!--  PAGE HE   ADING -->
-    </header>
-
-
-
-
-
-
-
-
-
-
-
-
+<?php include('layouts/header_donor_list.php'); ?>
     <section class="page-header">
         <div class="container">
             <div class="row">
@@ -142,30 +10,16 @@
             </div> <!-- end .row  -->
         </div> <!-- end .container  -->
     </section> <!-- end .page-header  -->
-
-
-
     <section class="content">
-
-
-
         <!-- Default box -->
         <div class="card card-solid">
             <div class="card-body">
                 <div class="row d-flex align-items-stretch">
-
-
-
-
                     <?php include('admin/include/connect.php'); ?>
                     <?php
-
-
                     $con = connect_db();
                     $sql = "SELECT * FROM req_for_blood ORDER BY id DESC";
-
                     $result = mysqli_query($con, $sql);
-
                     ?>
                     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
@@ -176,13 +30,13 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>User Name: <?php echo $row['name'];  ?></b></h2>
+                                            <h2 class="lead"><b>Patient Name : <?php echo $row['name'];  ?></b></h2>
                                             <h3 class="text-muted text-sm"> Address: <?php echo $row['address'];  ?></h3>
-                                            <h3 class="text-muted text-sm"> Blood Group: <?php echo $row['blood_group'];  ?></h3>
+                                            <h3 class="text-muted text-sm"> Blood Group: <b><?php echo $row['blood_group'];  ?></b></h3>
                                             <h3 class="text-muted text-sm"> Blood Bag: <?php echo $row['blood_bag'];  ?></h3>
                                             <h3 class="text-muted text-sm">Age : <?php echo $row['age'];  ?> </h3>
                                             <h3 class="text-muted text-sm"> Gender : <?php echo $row['gender']; ?> </h3>
-                                            <h3 class="text-muted text-sm"> Email :<?php echo $row['email']; ?> </h3>
+                                            <h3 class="text-muted text-sm"> Email : <?php echo $row['email']; ?> </h3>
                                             <h3 class="text-muted text-sm">Phone No : <?php echo $row['phone']; ?> </h3>
                                         </div>
                                         <div class="col-5 text-center">
@@ -193,10 +47,10 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-right">
-                                        <a href="mailto:" class="btn btn-sm bg-teal">
+                                        <a href="mailto:<?php echo $row['email']; ?>" class="btn btn-sm bg-teal">
                                             <i class="fas fa-paper-plane"> Send Mail</i>
                                         </a>
-                                        <a href="tel:" class="btn btn-sm btn-primary">
+                                        <a href="tel:<?php echo $row['phone']; ?>" class="btn btn-sm btn-primary">
                                             <i class="fas fa-phone"></i> Call Now
                                         </a>
                                     </div>
@@ -206,10 +60,6 @@
 
                     <?php } ?>
                 </div>
-
-
-
-
             </div>
         </div>
         </div>
@@ -231,96 +81,5 @@
         <!-- /.card-footer -->
         </div>
         <!-- /.card -->
-
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer>
-
-
-
-        <!--FOOTER CONTENT  -->
-
-        <section class="footer-contents">
-
-            <div class="container">
-
-
-            </div> <!--  end .container -->
-            <div class="container">
-
-                <div class="row clearfix">
-
-                    <div class="col-md-6 col-sm-12">
-                        <p class="copyright-text"> Copyright © 2020, All Right Reserved - by DIU_BLOOD_CENTER </p>
-
-                    </div> <!-- end .col-sm-6  -->
-
-                    <div class="col-md-6 col-sm-12 text-right">
-                        <div class="footer-nav">
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Causes</a>
-                                    </li>
-                                    <li>
-                                        <a href="donate.html">Events</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-with-sidebar.html">Gallery</a>
-                                    </li>
-                                    <li>
-                                        <a href="campaign-grid.html">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                    <li>
-                                        <div class="top-bar-social">
-
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
-                                            <a href="#"><i class="fa fa-youtube"></i></a>
-                                    </li>
-                        </div>
-                        </ul>
-                        </nav>
-                    </div> <!--  end .footer-nav  -->
-                </div> <!--  end .col-lg-6  -->
-
-            </div> <!-- end .row  -->
-
-            </div> <!--  end .container  -->
-
-        </section> <!--  end .footer-content  -->
-
-    </footer>
-
-    <!-- END FOOTER  -->
-
-
-</body>
-
-
-</html>
+    <?php include('layouts/footer_donor_list.php'); ?>

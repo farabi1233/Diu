@@ -1,4 +1,12 @@
-<?php $url = 'http://localhost/DIU/admin/';
+<?php 
+session_start();
+if(!isset($_SESSION['uname'])){
+    echo "<script>location.href='login.php'</script>";
+}else{
+}
+?>
+
+<?php $url = '/diu-blood-center-php/admin/';
 include('include/connect.php');
 $con = connect_db();
 //$sql = "SELECT* FROM blog  where `blog`.`id` = '$id'";
@@ -7,8 +15,6 @@ $con = connect_db();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <title>DIU</title>
     <meta charset="utf-8" />
@@ -40,9 +46,9 @@ $con = connect_db();
                     <!-- begin navbar-header -->
                     <div class="navbar-header d-flex align-items-center">
                         <a href="javascript:void:(0)" class="mobile-toggle"><i class="ti ti-align-right"></i></a>
-                        <a class="navbar-brand" href="<?php echo $url; ?>index.php">
-                            <img src="assets/img/logo.png" class="img-fluid logo-desktop" alt="logo" />
-                            <img src="assets/img/logo-icon.png" class="img-fluid logo-mobile" alt="logo" />
+                        <a class="navbar-brand" href="<?php echo $url; ?>">
+                            <img src="../asset/images/logo.png" class="img-fluid logo-desktop" alt="logo" />
+                            <img src="../asset/images/logo.png" class="img-fluid logo-mobile" alt="logo" />
                         </a>
                     </div>
 
@@ -77,40 +83,42 @@ $con = connect_db();
                 <aside class="app-navbar">
                     <!-- begin sidebar-nav -->
                     <div class="sidebar-nav scrollbar scroll_light">
-                        <ul class="metismenu " id="sidebarNav">
+                    <ul class="metismenu " >
                             <br>
                             <li class="active">
+                                <a href="<?php echo $url; ?>" aria-expanded="false">
+                                    <i class="nav-icon ti ti-menu"></i>
+                                    <span class="nav-title">Dashboard</span>
+
+                                </a>
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
-                                    <i class="nav-icon ti ti-rocket"></i>
+                                    <i class="nav-icon ti ti-plus"></i>
                                     <span class="nav-title">Add Data</span>
 
                                 </a>
                                 <ul aria-expanded="false">
-                                    <li class="active"> <a href='<?php echo $url; ?>donor/create.php'>Add Donor</a> </li>
-                                    <li> <a href='<?php echo $url; ?>campaign/create.php'>Add Campaign </a> </li>
-                                    <li> <a href='<?php echo $url; ?>blog/create.php'>Add Blog </a> </li>
-                                    <li > <a href='<?php echo $url; ?>donate/create.php'>Add Donate Data </a> </li>
+                                    <li > <a href='<?php echo $url; ?>donor/create.php'>Donor</a> </li>
+                                    <li> <a href='<?php echo $url; ?>campaign/create.php'>Campaign </a> </li>
+                                    <li> <a href='<?php echo $url; ?>blog/create.php'>Blog </a> </li>
+                                    <li> <a href='<?php echo $url; ?>donate/create.php'>Blood Donation</a> </li>
                                 </ul>
                             </li>
+                            <li class="active">
+                                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                    <i class="nav-icon ti ti-eye"></i>
+                                    <span class="nav-title">View Data</span>
 
-
-
-
-
-                            <li>
-                                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-layout-column3-alt"></i><span class="nav-title">Show Data</span></a>
+                                </a>
                                 <ul aria-expanded="false">
-                                    <li class="active"> <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
+                                <li> <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
                                     <li> <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
                                     <li> <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
-                                    <li> <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
+                                    <li> <a href="<?php echo $url; ?>donate/index.php">Blood Donation List</a> </li>
                                     <li> <a href="<?php echo $url; ?>blood_req/index.php">Request For Blood</a> </li>
-                                    <li> <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
+                                    <li> <a href="<?php echo $url; ?>reg_info/index.php">New Donor Apply List</a> </li>
 
                                 </ul>
                             </li>
-
-
                         </ul>
                     </div>
                     <!-- end sidebar-nav -->
@@ -138,21 +146,12 @@ $con = connect_db();
                                     </div>
                                     <!-- icon  start-->
                                     <div class="ml-auto d-flex align-items-center secondary-menu text-center">
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Todo list">
-                                            <i class="fe fe-edit btn btn-icon text-primary"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Projects">
-                                            <i class="fa fa-lightbulb-o btn btn-icon text-success"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Task">
-                                            <i class="fa fa-check btn btn-icon text-warning"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar">
-                                            <i class="fa fa-calendar-o btn btn-icon text-cyan"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Analytics">
-                                            <i class="fa fa-bar-chart-o btn btn-icon text-danger"></i>
-                                        </a>
+                                    <form action="logout.php" method="post">
+                                    <a href="logout" class="tooltip-wrapper"  data-placement="top"  data-original-title="Logout?">
+                                        <button type="submit" class="btn btn-sm btn-secondary"><i class="fa fa-sign-out "></i> Logout</button>
+                                     </a>
+                                    </form>
+                                    
                                     </div>
                                     <!-- icon  finish-->
                                 </div>
@@ -206,7 +205,7 @@ $con = connect_db();
                                         <div class="col-xxl-3 col-lg-6">
                                             <div class="p-20 border-xxl-right border-bottom border-xxl-bottom-0">
                                                 <div class="d-flex m-b-10">
-                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Request For Blood (By User)</p>
+                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Request For Blood</p>
                                                     <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
                                                 </div>
                                                 <div class="d-block d-sm-flex h-100 align-items-center">
@@ -235,7 +234,7 @@ $con = connect_db();
                                         <div class="col-xxl-3 col-lg-6">
                                             <div class="p-20 border-lg-right border-bottom border-lg-bottom-0">
                                                 <div class="d-flex m-b-10">
-                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Number of Donate </p>
+                                                    <p class="mb-0 font-regular text-muted font-weight-bold">Total Blood Donation </p>
                                                     <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
                                                 </div>
                                                 <div class="d-block d-sm-flex h-100 align-items-center">

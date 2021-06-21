@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2020 at 05:33 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Generation Time: Dec 28, 2020 at 04:15 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -41,11 +40,10 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `title`, `description`, `date`, `image`) VALUES
-(7, 'hello blog 34', '    mmmmmmmmmmm', '2020-02-22', 'uploads/32038830_premium_space_brushes___volume_i_by_era_7_dbvszkz-200h.jpg'),
-(8, 'BBA', 'Lorem ipsum dolor sit amet, sit ea alienum intellegat. Eruditi lobortis disputationi sit ne, duo fuisset intellegat at. Numquam scaevola dissentiunt at per, paulo impetus has ad, vidit concludaturque sea cu. Qui legimus nostrum tacimates eu, ad repudiandae consectetuer usu, vis ceteros ponderum electram ex. Ut nullam ubique mandamus eam.\r\n\r\nNo movet cetero voluptatibus eum, nibh solum iusto qui ea, te mel iudico possit. Dolor vituperata no vix. His dicta dissentias delicatissimi ad. Mollis iriure ius et. Autem tamquam labores at nec, exerci voluptua sea te. Vim idque minim scripta ad, id per augue sanctus blandit.\r\n\r\nNemore ocurreret complectitur te quo, in ullum appellantur nam, movet salutatus eu has. Dicam lucilius ea vel, an usu posse principes maiestatis. An nec sint nostrum perfecto, eu ius viris labore suscipit. Mel alii copiosae te, ei vis illum malis detraxit. Prompta appetere convenire ut nam, nobis alterum ad his, laudem regione sit te. Quo deseruisse complectitur ad. Atqui omittam convenire usu in, ne justo libris rationibus nam.\r\n\r\nPro ut tritani neglegentur instructior, malis sonet euismod vel ei, mea in mutat illum vulputate. Atomorum oportere ex sea, cetero repudiare no vix, vel id utinam interpretaris. Vocibus oportere vis et. Ne augue ubique urbanitas qui.\r\n\r\nNam at harum appetere, ius incorrupte consectetuer no. Falli delenit eam te. Cu idque iudico per, an sint saepe patrioque vel. Te homero gloriatur nam, quas vidit conclusionemque eum ea. Nam mutat soluta facilis ut, unum discere senserit ut mel.', '2020-02-22', 'uploads/653663argonwilliamme.png'),
-(9, 'ভুল মানুষটাও মাঝে মাঝে চায়!  ger geh erhtrhr theher', ' fddfdf', '2020-02-15', 'uploads/336292monster_hunter_girls____01_by_koyorin_ddqwyrz-250t.png'),
-(11, 'ভূল মানুষটাও মাঝে মাঝে চায়! ', ' Lorem ipsum, ', '2020-02-24', 'uploads/408053___watch_your_back____by_juliathedragoncat_ddqwi4f-250t.png'),
-(12, 'new blog  ', '\r\nLorem ipsum  ', '2020-02-24', 'uploads/793245buccaneer_ami_by_jamoart_ddqxf37-300w.jpg');
+(13, 'We arrange blood donation programe ', ' We collect blood mainly from four sources.\r\n\r\n1.Blood donation program :\r\n\r\nWe arrange blood donation program at colleges, university, many institutes & many other places.\r\n\r\nWe motivate all people for voluntary blood donation. A person can easily donate 1 unit (300-350 ml) of blood after 4 months of last donation.\r\n\r\nConditions of blood donation :\r\n\r\nÂ¤ Age â€“ 18 to 57.\r\n\r\nÂ¤ Weight â€“ Male 100 pounds & Female 95 pounds\r\n\r\nÂ¤ Blood pressure â€“ Normal (100-140/60-90 mmHg)\r\n\r\nÂ¤ Female not undergo with pregnancy & menstruation.\r\n\r\nAdvantage :\r\n\r\nA person who donate blood in Medicine Club gets a â€œDonor Cardâ€. When require, that person can collect same amount of blood from us by showing the card.\r\n\r\n2.Fixed donor :\r\n\r\nThere are fixed blood donors of Medicine Club who donate blood regularly to us. We preserve their address & contact no. In emergency blood requirement we contact with them. They also get the advantage of Donor Cardâ€ .We have also fixed donors for Thessalonian patients.\r\n\r\n3.Medical College Students :\r\n\r\nMedical College hostel is the most dependable source of blood. All students donate blood regularly. We preserve data of blood group, contact no. & room no. of all students of all batches. ', '2020-02-24', 'uploads/67632612.jpg'),
+(14, 'Blood distribution ', 'We distribute blood to the patients by following ways-\r\n\r\n1.Exchange :\r\n\r\nThe main condition of blood distribution is exchange. We give 1 unit of blood to the patient & patient also give us 1 unit of blood.\r\n\r\n2.Free :\r\n\r\nIn some cases we distribute blood without any condition. Patient who does have any donor for exchange but his/her condition is serious, then we distribute them blood without any condition.\r\n\r\n3.Thalassaemia patients :\r\n\r\nThalassaemia patients get blood from us without any condition. For thalassaemia patients, we have specific â€œthalassaemia patient formâ€.\r\n\r\nAbdul Malek Ukil Medical College unit\r\nBrahmanbaria Medical College Unit\r\nCentral Medical College unit\r\nComilla Medical College unit\r\nCoxâ€™s Bazaar Medical College unit\r\nDelta Medical College unit\r\nDhaka Medical College unit\r\nFaridpur Medical College unit\r\nGonoshasthaya Samaj Vittik Medical College unit\r\nKustia Medical College unit\r\nM Abdur Rahim Medical College unit\r\nMainamoti Medical College Unit\r\nMugda Medical College Medicine Club (Proposed)\r\nMymensingh Medical College unit\r\nPabna Medical College unit\r\nPatuakhali Medical College unit\r\nPresident Abdul Hamid Medical College unit\r\nRajshahi Medical College Unit\r\nRangpur Medical College unit\r\nShaheed Syed Nazrul Islam Medical College unit\r\nShaheed Tajuddin Ahmad Medical College unit\r\nSheikh Hasina Medical College Unit\r\nSher-E-Bangla Medical College unit\r\nSylhet Osmani Medical College unit\r\nUNIVERSAL MEDICAL COLLEGE (PROPOSED UNIT)\r\nUS-BANGLA MEDICAL COLLEGE UNIT\r\nUNIVERSAL MEDICAL COLLEGE (PROPOSED UNIT)\r\n ', '2020-02-28', 'uploads/717542290320103496-Copy.jpg'),
+(15, 'Blood Donation Going on ', 'We distribute blood to the patients by following ways-\r\n\r\n1.Exchange :\r\n\r\nThe main condition of blood distribution is exchange. We give 1 unit of blood to the patient & patient also give us 1 unit of blood.\r\n\r\n2.Free :\r\n\r\nIn some cases we distribute blood without any condition. Patient who does have any donor for exchange but his/her condition is serious, then we distribute them blood without any condition.\r\n\r\n3.Thalassaemia patients :\r\n\r\nThalassaemia patients get blood from us without any condition. For thalassaemia patients, we have specific â€œthalassaemia patient formâ€.\r\n\r\nAbdul Malek Ukil Medical College unit\r\nBrahmanbaria Medical College Unit\r\nCentral Medical College unit\r\nComilla Medical College unit\r\nCoxâ€™s Bazaar Medical College unit\r\nDelta Medical College unit\r\nDhaka Medical College unit\r\nFaridpur Medical College unit\r\nGonoshasthaya Samaj Vittik Medical College unit\r\nKustia Medical College unit\r\nM Abdur Rahim Medical College unit\r\nMainamoti Medical College Unit\r\nMugda Medical College Medicine Club (Proposed)\r\nMymensingh Medical College unit\r\nPabna Medical College unit\r\nPatuakhali Medical College unit\r\nPresident Abdul Hamid Medical College unit\r\nRajshahi Medical College Unit\r\nRangpur Medical College unit\r\nShaheed Syed Nazrul Islam Medical College unit\r\nShaheed Tajuddin Ahmad Medical College unit\r\nSheikh Hasina Medical College Unit\r\nSher-E-Bangla Medical College unit\r\nSylhet Osmani Medical College unit\r\nUNIVERSAL MEDICAL COLLEGE (PROPOSED UNIT)\r\nUS-BANGLA MEDICAL COLLEGE UNIT\r\nUNIVERSAL MEDICAL COLLEGE (PROPOSED UNIT)\r\n ', '2020-02-28', 'uploads/583820process_3.jpg'),
+(16, 'Give Blood Safe Life ', 'We distribute blood to the patients by following ways-\r\n\r\n1.Exchange :\r\n\r\nThe main condition of blood distribution is exchange. We give 1 unit of blood to the patient & patient also give us 1 unit of blood.\r\n\r\n2.Free :\r\n\r\nIn some cases we distribute blood without any condition. Patient who does have any donor for exchange but his/her condition is serious, then we distribute them blood without any condition.\r\n\r\n3.Thalassaemia patients :\r\n\r\nThalassaemia patients get blood from us without any condition. For thalassaemia patients, we have specific â€œthalassaemia patient formâ€.\r\n\r\nAbdul Malek Ukil Medical College unit\r\nBrahmanbaria Medical College Unit\r\nCentral Medical College unit\r\nComilla Medical College unit\r\nCoxâ€™s Bazaar Medical College unit\r\nDelta Medical College unit\r\nDhaka Medical College unit\r\nFaridpur Medical College unit\r\nGonoshasthaya Samaj Vittik Medical College unit\r\nKustia Medical College unit\r\nM Abdur Rahim Medical College unit\r\nMainamoti Medical College Unit\r\nMugda Medical College Medicine Club (Proposed)\r\nMymensingh Medical College unit\r\nPabna Medical College unit\r\nPatuakhali Medical College unit\r\nPresident Abdul Hamid Medical College unit\r\nRajshahi Medical College Unit\r\nRangpur Medical College unit\r\nShaheed Syed Nazrul Islam Medical College unit\r\nShaheed Tajuddin Ahmad Medical College unit\r\nSheikh Hasina Medical College Unit\r\nSher-E-Bangla Medical College unit\r\nSylhet Osmani Medical College unit\r\nUNIVERSAL MEDICAL COLLEGE (PROPOSED UNIT)\r\nUS-BANGLA MEDICAL COLLEGE UNIT\r\nUNIVERSAL MEDICAL COLLEGE (PROPOSED UNIT)\r\n ', '2020-02-28', 'uploads/776943header-bg.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,10 +66,10 @@ CREATE TABLE `campaign` (
 --
 
 INSERT INTO `campaign` (`id`, `name`, `details`, `start_time`, `end_time`, `location`, `image`) VALUES
-(10, 'new ', '  dafsg ', '2020-02-28', '2020-02-15', ' dfghj ', 'uploads/202240argonwilliamme.png'),
-(11, 'hello world ', ' yhui ', '2020-02-13', '2020-02-29', ' ygghi', 'uploads/3762780laffson.png'),
-(12, 'srk', '  hth ', '2020-02-08', '2020-02-15', ' htfht ', 'uploads/606113arualmeow.jpg'),
-(13, '12345 ', ' dgdrg ', '2020-02-14', '2020-02-28', ' dfbhfdh', 'uploads/477748_tutorial__how_to_color_eyes___sai_fale_free_by_voeza_ddge42z-250t.jpg');
+(14, 'Anti-Drug Campaign and Blood Donation ', '  Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium. ', '2020-01-30', '2020-02-06', ' DIU auditorium, Daffodil International University ', 'uploads/640436qwq.jpg'),
+(15, 'Blood donation campaign held at DIU ', '  Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium.\r\n Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium. ', '2020-02-22', '2020-02-13', ' DIU auditorium, Daffodil International University ', 'uploads/34859612121.jpg'),
+(16, 'Blood donation on Dhaka ', ' Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium.\r\n Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium. ', '2020-02-14', '2020-12-08', ' DIU auditorium, Daffodil International University', 'uploads/868094event_1.jpg'),
+(17, 'Blood donation on Uttara ', '   Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium.\r\n Daffodil International University (DIU) and Police Blood Bank of Dhaka Metropolitan Police (DMP) jointly organized a day long program titled â€œAnti-Drug Campaign and Blood Donation Programâ€ including Rally, Seminar, Blood Donation Camp, Cultural Program held on 25th September 2012 at DIU auditorium. ', '2020-02-13', '2020-02-29', ' DIU auditorium, Daffodil International University  ', 'uploads/254735process_2.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,14 +89,14 @@ CREATE TABLE `donate` (
 --
 
 INSERT INTO `donate` (`id`, `user_id`, `date`, `venue`) VALUES
-(16, 1003, '2020-02-24 ', 'Permanent Campus'),
 (17, 1004, '2020-02-24 ', 'Main Campus '),
 (18, 1005, '2020-02-24 ', 'Permanent Campus'),
 (19, 1006, '2020-02-24 ', 'Others'),
 (20, 1007, '2020-02-24 ', 'Permanent Campus'),
-(21, 1003, '2020-02-24 ', 'Others'),
-(22, 1003, '2020-02-24 ', 'Permanent Campus'),
-(23, 1004, '2020-02-24 ', 'Permanent Campus');
+(32, 1003, '2020-02-24 ', 'Permanent Campus'),
+(36, 1014, '2020-08-07 ', 'Permanent Campus'),
+(38, 1013, '2020-08-07 ', 'Permanent Campus'),
+(40, 1012, '2020-08-07 ', 'Permanent Campus');
 
 -- --------------------------------------------------------
 
@@ -123,12 +121,13 @@ CREATE TABLE `donor_list` (
 --
 
 INSERT INTO `donor_list` (`id`, `name`, `blood_group`, `age`, `gender`, `phone`, `email`, `address`, `image`) VALUES
-(1003, 'Shawon', 'AB- ', '12', 'male', ' hello ', 'admin@admin.com', ' তকব্  ', 'uploads/56487blazbaros.jpg '),
-(1004, 'Farabi ', 'A+ ', '22', '', ' +88001944179099 ', 'admin@admin.com', ' fsdf ', 'uploads/437371dark-necrodevourer.jpg'),
-(1005, 'luna ', 'O+ ', '22', 'male ', ' +88001944179099 ', 'hosnain15-1233@diu.edu.bd', ' dsfs', 'uploads/781185aspire_by_vanillaghosties_ddqwghf-250t.jpg '),
-(1006, 'setu ', 'B- ', '12', 'others ', ' +88001944179099 ', 'md.hosnain@gmail.com', ' dfs', 'uploads/616229colors_are_the_smiles_of_nature_by_innerdepravityart_d6p7sd0-200h.jpg '),
-(1007, 'Emon ', 'B- ', '22', 'male ', ' +8801944179099 ', 'gojnobi.bd@gmail.com', ' savar', 'uploads/558606carlosbragaart80.jpg '),
-(1008, 'mohoian ', 'O- ', '22', '', ' +8801944179099 ', 'hosnain15-1233@diu.edu.bd', ' mirpur', 'uploads/49551387180737_627809018009546_7324250408958820352_n.jpg ');
+(1010, 'Shahriar Shawon ', 'O+ ', '23', 'male ', ' 01774339279 ', 'shawonrog@gmail.com', ' Dhaka,Bangladesh', 'uploads/417807images0.jpg '),
+(1011, 'Shahriar Sifat ', 'O+ ', '22', 'male ', ' 01874339279 ', 'rog@gmail.com', ' Savar,Dhaka,Bangladesh', 'uploads/92288014775_Karting-360-Poslovni-portreti-_Foto-Jaka-IvanC48DiC48D_Foto-Jaka-IvanC48DiC48D_17102018-360x360.jpg '),
+(1012, 'Shumrose Shetu ', 'A+ ', '22', '', ' 01974339279 ', 'shetu@gmail.com', ' Savar,Dhaka,Bangladesh ', 'uploads/772591shetu.jpg '),
+(1013, 'Fariha Luna ', 'O- ', '21', 'female ', ' 01374339279 ', 'luna@gmail.com', 'Dhaka,Bangladesh', 'uploads/370384luna.jpg '),
+(1014, 'Emon Ahmmad ', 'O- ', '23', 'male ', ' 01574339279 ', 'emon@gmail.com', 'Ashulia,Dhaka,Bangladesh', 'uploads/657015emon.jpg '),
+(1015, 'Shawon ', 'O+ ', '23', 'male ', ' 01788441420 ', 'shawon@gmail.com', 'YKSG,Dhaka,Bangladesh', 'uploads/871317shawon.jpg '),
+(1016, 'Farabi ', 'B+ ', '22', 'male ', ' 01940638707 ', 'farabi@gmail.com', 'YKSG,Dhaka,Bangladesh', 'uploads/607826farabi.jpg ');
 
 -- --------------------------------------------------------
 
@@ -153,9 +152,13 @@ CREATE TABLE `reg_donor` (
 --
 
 INSERT INTO `reg_donor` (`id`, `name`, `age`, `email`, `phone`, `gender`, `blood_group`, `image`, `address`) VALUES
-(10, 'hosnain ', '22 ', 'md.hosnain@gmail.com', '+88001944179099', 'Male', 'O+ ', 'uploads/7007570laffson.png ', 'ghgdhgd'),
 (11, 'farabi ', '12 ', 'fairozahmed0155@gmail.com', '+88001944179099', 'Male', 'O+ ', 'uploads/1969730_premium_space_brushes___volume_i_by_era_7_dbvszkz-200h.jpg ', 'fgfdg'),
-(12, 'hello world ', '22 ', 'md.hosnain@gmail.com', '+88001944179099', 'Female', 'A+ ', 'uploads/25863430_premium_space_brushes___volume_i_by_era_7_dbvszkz-200h.jpg ', 'sfgf');
+(19, 'Shahriar Shawon ', '23 ', 'shawonrog@gmail.com', '01774339279', 'Male', 'O+ ', 'uploads/737499shawon.jpg ', ' Dhaka,Bangladesh'),
+(20, 'Shetu ', '22 ', 'shetu@gmail.com', '01940638707', 'Female', 'O- ', 'uploads/590648shetu.jpg ', ' Dhaka,Bangladesh'),
+(21, 'Luna ', '22 ', 'luna@gmail.com', '01374339279', 'Female', 'B+ ', 'uploads/196917luna.jpg ', ' Dhaka,Bangladesh'),
+(22, 'Jhon Doe ', '22 ', 'Jhon@gmail.com', '02374339279', 'Male', 'AB+ ', 'uploads/121008Andrew-Rush-360x360.jpg ', ' Dhaka,Bangladesh'),
+(23, 'Kimi No Wa ', '22 ', 'Kimi@gmail.com', '01374389279', 'Male', 'A- ', 'uploads/686137image.jpeg ', ' Dhaka,Bangladesh'),
+(24, 'Test 28 ', '25 ', 'admin@geekshopbd.com', '01774339279', 'Male', 'O+ ', 'uploads/463436930px-Desktop.jpg ', 'awawdawdawdwaawdawd');
 
 -- --------------------------------------------------------
 
@@ -180,10 +183,14 @@ CREATE TABLE `req_for_blood` (
 --
 
 INSERT INTO `req_for_blood` (`id`, `name`, `age`, `email`, `phone`, `gender`, `blood_group`, `blood_bag`, `address`) VALUES
-(1, 'hosnain ', '22 ', 'md.hosnain@gmail.com', '+88001944179099', 'Male', '3 ', ' ', 'savae,dhaka'),
-(4, 'shila ', '1234 ', 'md.hosnain@gmail.com', '+88001944179099', 'Female', 'O+ ', '2 ', 'Barishal'),
-(6, 'mina ', '33 ', 'hosnain15-1233@diu.edu.bd', '+88001944179099', 'Male', 'AB+ ', '1 ', 'motijheel'),
-(8, 'mirana  ', '22 ', 'md.hosnain@gmail.com', '+88001944179099', 'Male', 'AB+ ', '3 ', 'monipur');
+(12, 'Rafiq ', '23 ', 'shawonexa@gmail.com', '01774339279', 'Male', 'O+ ', '2 ', 'Motijhil,Dhaka'),
+(13, 'Rahim', '32 ', 'xzy@gmail.com', '01774339277', 'Male', 'A+ ', '3 ', 'Uttara,Dhaka'),
+(14, 'Sifat ', '42 ', 'xzy@gmail.com', '01774339277', 'Male', 'AB+ ', '4 ', 'Farmgate,Dhaka'),
+(15, 'Tasmia Rahman ', '35 ', 'xzy@gmail.com', '01778339277', 'Female', 'O+ ', '3 ', 'Farmgate,Dhaka'),
+(16, 'Tasmia Tania ', '25 ', 'xzy@gmail.com', '01778339277', 'Female', 'O+ ', '3 ', 'Farmgate,Dhaka'),
+(17, 'Tanjin Tania ', '19 ', 'xzy@gmail.com', '01778339277', 'Female', 'B+ ', '1 ', 'Farmgate,Dhaka'),
+(18, 'Tisha Ahmmad ', '24 ', 'xzy@gmail.com', '01778339277', 'Female', 'AB+ ', '2 ', 'Farmgate,Dhaka'),
+(19, 'Tisha Rafia ', '28 ', 'xzy@gmail.com', '01778339277', 'Female', 'B+ ', '1 ', 'Townhall,Dhaka');
 
 --
 -- Indexes for dumped tables
@@ -233,37 +240,37 @@ ALTER TABLE `req_for_blood`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `campaign`
 --
 ALTER TABLE `campaign`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `donate`
 --
 ALTER TABLE `donate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `donor_list`
 --
 ALTER TABLE `donor_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1009;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1017;
 
 --
 -- AUTO_INCREMENT for table `reg_donor`
 --
 ALTER TABLE `reg_donor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `req_for_blood`
 --
 ALTER TABLE `req_for_blood`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

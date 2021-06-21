@@ -1,7 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION['uname'])) {
+    echo "<script>location.href='../login.php'</script>";
+} else {
+}
+?>
 <?php ob_start(); ?>
 
-<?php $url = 'http://localhost/DIU/admin/'; ?>
-
+<?php $url = '/diu-blood-center-php/admin/'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +35,7 @@
     <div class="app">
         <!-- begin app-wrap -->
         <div class="app-wrap">
-            
+
             <!-- begin app-header -->
             <header class="app-header top-bar">
                 <!-- begin navbar -->
@@ -38,9 +44,9 @@
                     <!-- begin navbar-header -->
                     <div class="navbar-header d-flex align-items-center">
                         <a href="javascript:void:(0)" class="mobile-toggle"><i class="ti ti-align-right"></i></a>
-                        <a class="navbar-brand" href="<?php echo $url; ?>index.php">
-                            <img src="../assets/img/logo.png" class="img-fluid logo-desktop" alt="logo" />
-                            <img src="../assets/img/logo-icon.png" class="img-fluid logo-mobile" alt="logo" />
+                        <a class="navbar-brand" href="<?php echo $url; ?>">
+                            <img src="../../asset/images/logo.png" class="img-fluid logo-desktop" alt="logo" />
+                            <img src="../../assets/img/logo-icon.png" class="img-fluid logo-mobile" alt="logo" />
                         </a>
                     </div>
 
@@ -60,12 +66,12 @@
                     <!-- begin navigation -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="navigation d-flex">
-                           
-                           
+
+
                         </div>
                     </div>
                     <!-- end navigation -->
-              </nav>
+                </nav>
                 <!-- end navbar -->
             </header>
             <!-- end app-header -->
@@ -75,41 +81,45 @@
                 <aside class="app-navbar">
                     <!-- begin sidebar-nav -->
                     <div class="sidebar-nav scrollbar scroll_light">
-                        <ul class="metismenu " id="sidebarNav">
+                        <ul class="metismenu " >
                             <br>
+                            <li class="active">
+                                <a href="<?php echo $url; ?>" aria-expanded="false">
+                                    <i class="nav-icon ti ti-menu"></i>
+                                    <span class="nav-title">Dashboard</span>
+
+                                </a>
+                                
+                            </li>
                             <li class="active">
                                 <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                                     <i class="nav-icon ti ti-plus"></i>
-                                    <span class="nav-plus">Add Data</span>
-                                    
+                                    <span class="nav-title">Add Data</span>
+
                                 </a>
                                 <ul aria-expanded="false">
-                                    <li > <a href='<?php echo $url; ?>donor/create.php'>Add Donor</a> </li>
-                                    <li > <a href='<?php echo $url; ?>campaign/create.php'>Add Campaign </a> </li>
-                                    <li > <a href='<?php echo $url; ?>blog/create.php'>Add Blog </a> </li>
-                                    <li > <a href='<?php echo $url; ?>donate/create.php'>Add Donate Data </a> </li>
+                                    <li > <a href='<?php echo $url; ?>donor/create.php'>Donor</a> </li>
+                                    <li> <a href='<?php echo $url; ?>campaign/create.php'>Campaign </a> </li>
+                                    <li> <a href='<?php echo $url; ?>blog/create.php'>Blog </a> </li>
+                                    <li> <a href='<?php echo $url; ?>donate/create.php'>Blood Donation</a> </li>
                                 </ul>
                             </li>
-                            
-                            
-                            
-                            
-                            
-                           
                             <li class="active">
-                                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="nav-icon ti ti-list"></i><span class="nav-title">Show Data</span></a>
+                                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                    <i class="nav-icon ti ti-eye"></i>
+                                    <span class="nav-title">View Data</span>
+
+                                </a>
                                 <ul aria-expanded="false">
-                                <li > <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
-                                <li > <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
-                                <li > <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
-                                <li > <a href="<?php echo $url; ?>donate/index.php">Who Donated</a> </li>
-                                <li > <a href="<?php echo $url; ?>blood_req/index.php">Request For Blood</a> </li>
-                                <li > <a href="<?php echo $url; ?>reg_info/index.php">Who Apply For Reg.</a> </li>
+                                <li> <a href="<?php echo $url; ?>donor/index.php">Donor</a> </li>
+                                    <li> <a href="<?php echo $url; ?>campaign/index.php">Campaign </a> </li>
+                                    <li> <a href="<?php echo $url; ?>blog/index.php">Blog</a> </li>
+                                    <li> <a href="<?php echo $url; ?>donate/index.php">Blood Donation List</a> </li>
+                                    <li> <a href="<?php echo $url; ?>blood_req/index.php">Request For Blood</a> </li>
+                                    <li> <a href="<?php echo $url; ?>reg_info/index.php">New Donor Apply List</a> </li>
 
                                 </ul>
                             </li>
-                           
-                           
                         </ul>
                     </div>
                     <!-- end sidebar-nav -->
@@ -135,34 +145,17 @@
                                     <div class="page-title mr-4 pr-4 border-right">
                                         <h1>Dashboard</h1>
                                     </div>
-                                     <!-- icon  start-->
+                                    <!-- icon  start-->
                                     <div class="ml-auto d-flex align-items-center secondary-menu text-center">
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Todo list">
-                                            <i class="fe fe-edit btn btn-icon text-primary"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Projects">
-                                            <i class="fa fa-lightbulb-o btn btn-icon text-success"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Task">
-                                            <i class="fa fa-check btn btn-icon text-warning"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar">
-                                            <i class="fa fa-calendar-o btn btn-icon text-cyan"></i>
-                                        </a>
-                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Analytics">
-                                            <i class="fa fa-bar-chart-o btn btn-icon text-danger"></i>
-                                        </a>
+                                        <form action="../logout.php" method="post">
+                                            <a href="logout" class="tooltip-wrapper" data-placement="top" data-original-title="Logout?">
+                                                <button type="submit" class="btn btn-sm btn-secondary"><i class="fa fa-sign-out "></i> Logout</button>
+                                            </a>
+                                        </form>
+
                                     </div>
                                     <!-- icon  finish-->
                                 </div>
                                 <!-- end page title -->
                             </div>
                         </div>
-                    
-                        <!-- end row -->
-                        <!-- begin row -->
-                       
-<!-- use in body diV -->
-                        <!-- <div class="row">
-                            <div class="col-sm-9">
-                                <div class="card card-statistics"> -->

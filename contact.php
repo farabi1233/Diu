@@ -28,53 +28,42 @@
                 <h2 class="contact-title">Contact us</h2>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-12">
 
                 <ul class="contact-info">
                     <li>
                         <span class="icon-container"><i class="fa fa-home"></i></span>
-                        <address>3100 C/A Mouchak,Sylhet,UK</address>
+                        <address>Dattapara,Ashulia,Savar,Dhaka</address>
                     </li>
                 </ul>
-
-            </div>
-
-            <div class="col-md-3">
-
                 <ul class="contact-info">
 
                     <li>
                         <span class="icon-container"><i class="fa fa-phone"></i></span>
-                        <address><a href="#">+093-120-525-9162</a></address>
+                        <address><a href="#">+8801 77 433 9279</a></address>
                     </li>
 
                 </ul>
-
-            </div>
-
-            <div class="col-md-3">
                 <ul class="contact-info">
+
                     <li>
                         <span class="icon-container"><i class="fa fa-envelope"></i></span>
-                        <address><a href="mailto:">query@yourdomain.com</a></address>
+                        <address><a href="#">donation@diubloodcenter.com</a></address>
                     </li>
+
                 </ul>
-
-            </div>
-            <div class="col-md-5">
-                
-            </div>
-
-            <div class="col-md-3">
-
                 <ul class="contact-info">
                     <li>
                         <span class="icon-container"><i class="fa fa-globe"></i></span>
-                        <address><a href="#">www.yourdomain.com</a></address>
+                        <address><a href="#">www.diubloodcenter.com</a></address>
                     </li>
                 </ul>
 
+
             </div>
+
+
+
 
         </div>
 
@@ -95,20 +84,34 @@
                 <h2 class="contact-title">Location</h2>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-5">
 
                 <ul class="contact-info">
                     <li>
                         <span class="icon-container"><i class="fa fa-home"></i></span>
-                        <address>3100 C/A Mouchak,Sylhet,UK</address>
+                        <address>Dattapara,Ashulia,Savar,Dhaka</address>
                     </li>
                 </ul>
+                <ul class="contact-info">
+                    <li>
+                        <span class="icon-container"><i class="fa fa-home"></i></span>
+                        <address>Daffodil Internation University , Permanent Campus</address>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-7">
 
+               
+                <ul class="contact-info">
+                    <li>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3648.3266839551484!2d90.31913275074515!3d23.878031789728986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1582579841290!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </li>
+                </ul>
             </div>
 
 
 
-      
+
 
         </div>
 

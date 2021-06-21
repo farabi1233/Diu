@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if(isset($_SESSION['uname'])){
+    echo "<script>location.href='index.php'</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +19,9 @@
         }
 
     </style>
-    
 </head>
 
 <body>
-
-
-
-
-
     <div class="container py-5">
         <div class="container h-100">
             <div class="row align-items-center h-100">
@@ -30,25 +30,21 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <h2>ACCOUNT LOGIN</h2>
+                                <h3>Admin Login Panel
+                                    </h3>
                                 <form action="login_function.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label for="name">Email</label>
-                                        <input type="email" class="form-control" name="email" placeholder="Enter Username ">
+                                        <label for="name">Username</label>
+                                        <input type="text" class="form-control" name="uname" id="uname"  placeholder="Enter username">
                                     </div>
-
-                                    <div class="form-group" s>
+                                    <div class="form-group">
                                         <label for="name">Password</label>
-                                        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                                        <input type="password" class="form-control" name="pwd" id="pwd"  placeholder="Enter password">
                                     </div>
-                                    
-
-
-
-                                    <button type="submit" class="btn btn-primary" name="submit">Submit</button><br><br>
-
-                                    <a href="#">Forgot Password? </a> <br>
-                                    <a href="#">Sing Up? </a>
+                                    <button type="submit" class="btn btn-primary" name="submit" value="login">Submit</button><br><br>
+                                    username: <span style="color: red;" >admin </span>
+                                    <br>
+                                    password:<span style="color: red;" >admin</span>
                                 </form>
 
                             </div>
