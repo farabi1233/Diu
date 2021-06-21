@@ -6,7 +6,7 @@ if(!isset($_SESSION['uname'])){
 }
 ?>
 
-<?php $url = '/diu-blood-center-php/admin/';
+<?php $url = '/Diu/admin/';
 include('include/connect.php');
 $con = connect_db();
 //$sql = "SELECT* FROM blog  where `blog`.`id` = '$id'";

@@ -7,7 +7,7 @@ if (!isset($_SESSION['uname'])) {
 ?>
 <?php ob_start(); ?>
 
-<?php $url = '/diu-blood-center-php/admin/'; ?>
+<?php $url = '/Diu/admin/'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,7 +98,7 @@ if (!isset($_SESSION['uname'])) {
 
                                 </a>
                                 <ul aria-expanded="false">
-                                    <li > <a href='<?php echo $url; ?>donor/create.php'>Donor</a> </li>
+                                    <li > <a href='<?php echo $url; ?>donor/create.php'>Donor List</a> </li>
                                     <li> <a href='<?php echo $url; ?>campaign/create.php'>Campaign </a> </li>
                                     <li> <a href='<?php echo $url; ?>blog/create.php'>Blog </a> </li>
                                     <li> <a href='<?php echo $url; ?>donate/create.php'>Blood Donation</a> </li>
